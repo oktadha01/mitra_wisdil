@@ -1,0 +1,317 @@
+.btn-group {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	height: auto;
+	width: auto;
+}
+
+.btn-group {
+	display: inline-block;
+	margin: 5px;
+	padding: 15px 25px;
+	background-color: #222;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+
+.nav {
+	position: fixed;
+	background: whitesmoke;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.nav .ul {
+	margin: 0;
+	padding: 0;
+}
+
+.nav .ul .li {
+	list-style-type: none;
+}
+
+.nav .ul .li .a {
+	text-decoration: none;
+	/* color: #fff; */
+	display: block;
+	padding: 10px 20px;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
+
+.nav.left {
+	height: 100%;
+	width: 100%;
+}
+
+.nav.left {
+	top: 0;
+	left: -250px;
+}
+
+.nav.left.nav-active {
+	left: 0;
+}
+
+
+
+
+
+.nav.top,
+.nav.bottom {
+	height: 94%;
+	width: 100%;
+	border: 4px solid #d6d6d6;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.nav.top {
+	top: -94%;
+	left: 0px;
+	z-index: 999;
+}
+
+.nav.top.nav-active {
+	top: 61px;
+	display: block;
+	z-index: 999;
+
+}
+
+.nav.bottom {
+
+	bottom: -94%;
+	left: 0;
+	z-index: 999;
+}
+
+.nav.bottom.nav-active {
+	bottom: 57px;
+	display: block;
+	z-index: 999;
+}
+
+.nav.top .ul,
+.nav.bottom .ul {
+	text-align: center;
+}
+
+.nav.top .ul .li,
+.nav.bottom .ul .li {
+	display: inline-block;
+	padding: 20px 25px;
+}
+
+/* Habib Pro Tag */
+.habibpro {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 15px 30px;
+	background-color: #212121;
+	color: #fff;
+	box-shadow: -2.5px 5px 5px #555;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 3px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.habibpro:hover {
+	background-color: #FFC107;
+	color: #222;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.bg-cornflowerblue {
+
+	background: cornflowerblue;
+
+}
+
+.nav-transaksi {
+	font-size: larger;
+	color: white;
+	font-weight: bold;
+	padding: 6px 2px;
+	width: auto;
+	height: min-content;
+}
+
+.p-table-inv {
+	padding-top: 16px
+}
+
+.size-poster {
+	width: 5rem;
+	border-radius: 7px;
+}
+
+.hr {
+	display: none;
+}
+
+.nav-tiket {
+	width: 100%;
+	position: relative;
+	background: none;
+
+}
+
+.btn-close-tiket {
+	display: none;
+}
+
+.max-h-list {
+	height: 18rem;
+	overflow: overlay;
+}
+
+.li-event-trans {
+	display: none;
+}
+
+.ul-poster-trans {
+	display: flex;
+	background: darkgray;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+/* All device mobile */
+@media only screen and (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
+	.max-h-list {
+		height: auto;
+		overflow: overlay;
+	}
+
+	.btn-close-tiket {
+		display: initial;
+	}
+
+	.f-size-tik {
+		font-size: large;
+	}
+
+	.card-footer-tiket-detail {
+		position: absolute;
+		width: inherit;
+		bottom: 5px;
+	}
+
+	.nav-tiket {
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		right: -100%;
+	}
+
+	.nav.right.nav-active {
+		right: 0;
+		z-index: 999;
+	}
+
+	.nav.right {
+		height: 100%;
+		width: 100%;
+	}
+
+	.size-poster {
+		width: 3rem
+	}
+
+	.p-table-inv {
+		padding-top: 0px
+	}
+
+	.hr {
+		display: block;
+	}
+
+	.code-tiket {
+		display: none;
+	}
+
+	
+	.li-event-trans {
+		display: unset;
+		place-self: center;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.ul-poster-trans {
+		display: contents;
+	}
+	.code-tiket {
+		display: none;
+	}
+}
+
+/* only device iphone 5/7/8 */
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+
+	.nav.bottom {
+		height: 92%;
+		width: 100%;
+		border: 4px solid #d6d6d6;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+
+
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+	.nav.top {
+		height: 87%;
+		width: 100%;
+		border: 4px solid #d6d6d6;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+	.nav.top.nav-active {
+		top: -4px;
+		display: block;
+		z-index: 999;
+	}
+}
+
+.num-tiket {
+	background: blanchedalmond;
+	font-weight: bold;
+	padding: 3px 14px;
+	border-radius: 4px;
+	font-size: x-large;
+}
+
+.notif-e-tiketSDA {
+	background-color: #28a745 !important;
+	color: cornsilk;
+	text-align: center;
+	margin-top: 9px;
+	border-radius: 5px;
+	margin-bottom: 0;
+}
