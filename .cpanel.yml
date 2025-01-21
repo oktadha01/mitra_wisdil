@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kina3126/public_html/mitra.wisdil.com/
+    - export DEPLOYPATH=/home/wisy2434/public_html/mitra.wisdil.com/
     - /bin/cp -R application $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R system $DEPLOYPATH
