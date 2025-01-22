@@ -55,66 +55,66 @@ class Daftar extends CI_Controller
     function pengajuan_akun_mitra()
     {
 
-        // $code_referral = $_POST['code_referral'];
-        // $nama = $_POST['nama'];
-        // $email = $_POST['email'];
-        // $no_wa = $_POST['no_wa'];
-        // $domisili = $_POST['domisili'];
-        
-        // $this->db->select("email");
-        // $this->db->where("email", $email);
-        // $query_ = $this->db->get('sales                                                                                            ');
-        // if ($query_->num_rows() == 0) {
-        //     $data = $nama . $email . $no_wa;
+        $code_referral = $_POST['code_referral'];
+        $nama = $_POST['nama'];
+        $email = $_POST['email'];
+        $no_wa = $_POST['no_wa'];
+        $domisili = $_POST['domisili'];
 
-        //     // Menghasilkan kode referral dengan hash MD5 (atau bisa menggunakan SHA1, base64_encode, dsb.)
-        //     $tokenCode = substr(md5($data), 0, 8); // Mengambil 8 karakter pertama dari hash
+        $this->db->select("email");
+        $this->db->where("email", $email);
+        $query_ = $this->db->get('sales                                                                                            ');
+        if ($query_->num_rows() == 0) {
+            $data = $nama . $email . $no_wa;
 
-        //     // echo $tokenCode;
-        //     $data = [
+            // Menghasilkan kode referral dengan hash MD5 (atau bisa menggunakan SHA1, base64_encode, dsb.)
+            $tokenCode = substr(md5($data), 0, 8); // Mengambil 8 karakter pertama dari hash
 
-        //         'code_referral' => $code_referral,
-        //         'nama' => $nama,
-        //         'email' => $email,
-        //         'no_wa' => $no_wa,
-        //         'domisili' => $domisili,
-        //         'token' => $tokenCode,
-        //     ];
-        //     // $this->M_auth->m_insert_regist($data);
-        //     echo json_encode([
-        //         'status' => 'success',
-        //         'message' => 'Pengajuan akun mitra berhasil',
-        //     ]);
-        //     if ($_POST) {
+            // echo $tokenCode;
+            $data = [
 
-        //         // Simpan ke cookie
-        //         $cookie_data = array(
-        //             'userdaftar' => $data,
-        //             'status' => '',
-        //         );
-        
-        //         // Serialisasi data agar dapat disimpan sebagai string
-        //         setcookie('userdaftar', json_encode($cookie_data), time() + (7 * 24 * 60 * 60), '/'); // 7 hari
+                'code_referral' => $code_referral,
+                'nama' => $nama,
+                'email' => $email,
+                'no_wa' => $no_wa,
+                'domisili' => $domisili,
+                'token' => $tokenCode,
+            ];
+            // $this->M_auth->m_insert_regist($data);
+            echo json_encode([
+                'status' => 'success',
+                'message' => 'Pengajuan akun mitra berhasil',
+            ]);
+            if ($_POST) {
 
-        //         //     redirect(''); // Redirect ke halaman utama
-        //     }
-        // } else {
-        //     // Kirim respons gagal
-        //     echo json_encode([
-        //         'status' => 'error',
-        //         'message' => 'Email sudah terdaftar',
-        //     ]);
-        // }
-        
+                // Simpan ke cookie
+                $cookie_data = array(
+                    'userdaftar' => $data,
+                    'status' => '',
+                );
+
+                // Serialisasi data agar dapat disimpan sebagai string
+                setcookie('userdaftar', json_encode($cookie_data), time() + (7 * 24 * 60 * 60), '/'); // 7 hari
+
+                //     redirect(''); // Redirect ke halaman utama
+            }
+        } else {
+            // Kirim respons gagal
+            echo json_encode([
+                'status' => 'error',
+                'message' => 'Email sudah terdaftar',
+            ]);
+        }
+
         // echo $tokenCode;
         $data = [
 
-            'code_referral' => 'mon123',
-            'nama' => 'Dian Rachmawati',
-            'email' => 'drachmawati4@gmail.com',
-            'no_wa' => '08926723636',
-            'domisili' => '3322',
-            'token' => 'dra4321',
+            'code_referral' => $code_referral,
+            'nama' => $nama,
+            'email' => $email,
+            'no_wa' => $no_wa,
+            'domisili' => $domisili,
+            'token' => $tokenCode,
         ];
 
         $cookie_data = array(
@@ -125,13 +125,13 @@ class Daftar extends CI_Controller
         // Serialisasi data agar dapat disimpan sebagai string
         setcookie('userdaftar', json_encode($cookie_data), time() + (7 * 24 * 60 * 60), '/'); // 7 hari
         $send_email = [
-            'nama' => 'Dian Rachmawati',
-            'email' => 'drachmawati4@gmail.com',
-            'token' => 'dra4321',
+            'nama' => $nama,
+            'email' => $email,
+            'token' => $tokenCode,
         ];
         $this->send_email($send_email);
     }
-    
+
     function send_ulang_token()
     {
         $email = $_POST['email'];
@@ -141,7 +141,7 @@ class Daftar extends CI_Controller
 
             // Assign the 'userdaftar' array to the class property
             $this->userdaftar = $userdaftar['userdaftar'];
-            
+
             $code_referral = $this->userdaftar['code_referral'];
             $nama = $this->userdaftar['nama'];
             $no_wa = $this->userdaftar['no_wa'];
