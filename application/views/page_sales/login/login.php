@@ -406,7 +406,7 @@
                 if ($(this).data('page') == 'Daftar') {
                     populateKota();
                 }
-                history.replaceState(null, '', window.location.origin + '/mitra_wisdil/' + $(this).data('page'));
+                history.replaceState(null, '', window.location.origin + '/' + $(this).data('page'));
 
             });
             $('.sign-up-form').submit(function() {
