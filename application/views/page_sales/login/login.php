@@ -410,6 +410,7 @@
 
             });
             $('.sign-up-form').submit(function() {
+                alert('yaa');
                 event.preventDefault(); // Hentikan submit form
 
                 let isValid = true; // Flag validasi
@@ -439,8 +440,15 @@
                         domisili: domisili.val(),
                     },
                     cache: false,
-                    dataType: "json", // Expect JSON response
-                    success: function(response) {
+                    dataType: "text", // Expect text response
+                    success: function(responseText) {
+                        let response;
+                        try {
+                            response = JSON.parse(responseText);
+                        } catch (e) {
+                            console.error('JSON parse error: ', e);
+                            return;
+                        }
 
                         if (response.status == 'success') {
                             Swal.fire({

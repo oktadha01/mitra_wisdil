@@ -74,10 +74,10 @@ class Daftar extends CI_Controller
             $data = [
 
                 'code_referral' => $code_referral,
+                'code_referral' => $code_referral,
                 'nama' => $nama,
                 'email' => $email,
                 'no_wa' => $no_wa,
-                'domisili' => $domisili,
                 'token' => $tokenCode,
             ];
             // $this->M_auth->m_insert_regist($data);
