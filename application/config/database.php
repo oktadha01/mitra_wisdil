@@ -14,13 +14,13 @@ $db['default'] = array(
 	// Online Production
 	// 'username' => 'wisy2434_wisdil',
 	// 'password' => 'wisdil2023',
+	// 'database' => 'wisy2434_wisdil',
 
-	'database' => 'wisy2434_wisdil',
 
 	'username' => 'wisy2434_mitra',
 	'password' => 'mitra123',
+	'database' => 'wisy2434_mitra',
 
-	// 'database' => 'wisy2434_mitra',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
