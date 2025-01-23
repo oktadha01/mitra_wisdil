@@ -122,19 +122,27 @@
                                     </td>
                                 </tr>
                                 <tr style="border-collapse:collapse">
-                                    <td align="left" style="padding:0;Margin:0;padding-top:5px">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left: 36px;">
                                         <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:600px">
                                             <tbody>
                                                 <tr style="border-collapse:collapse">
                                                     <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse;border-spacing:0px;float:left">
+                                                        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
                                                             <tbody>
                                                                 <tr style="border-collapse:collapse">
                                                                     <td align="left" style="padding:0;Margin:0;width:300px">
                                                                         <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
                                                                             <tbody>
                                                                                 <tr style="border-collapse:collapse">
-                                                                                    <td align="right" style="padding:0;Margin:0;font-size:0px"><a href="https://www.bca.co.id/id/Individu/layanan/Customer-Service/HaloBCA#download" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.bca.co.id/id/Individu/layanan/Customer-Service/HaloBCA%23download&amp;source=gmail&amp;ust=1735920333436000&amp;usg=AOvVaw1en4fJ-Q9Tij4gyIsbRxhk"><img src="https://ci3.googleusercontent.com/meips/ADKq_NYEwMIoZLBqdvKlWPx0M3prLnBfH7br0TxIo07BBjHVLXVkAGwojIhF450jBcGoxYQYuZ30SBpKJTNEpZSBNRiCa3Edtmu8dgbTmfoeVTXGKXthZy8_JSAYojKPiZeGZhgRas24q5lFZiBw3_PFsXBOELhwtfNpOgP_qguazgc-VQRW3AvYU-FeEOqdUw8lDrd-Ww=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202209_szL.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="145" class="CToWUd" data-bit="iit"></a></td>
+                                                                                    <td align="center" style="padding:0;Margin:0;font-size:0px">
+                                                                                        <a href="https://wa.me/6285864900443?text=Hallo%20Wisdil%20..." style="color:black;font-size:12px;display:flex;text-decoration:unset;" target="_blank" data-saferedirecturl="https://wa.me/6285864900443?text=Hallo%20Wisdil%20...">
+                                                                                            <img src="https://mitra.wisdil.com/assets/images/iconemail/wa.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="40" class="CToWUd" data-bit="iit">
+                                                                                            <div style="display: grid;margin-left: 10px;margin-top: 10px;text-align: left;">
+                                                                                                <p style="margin: 0;">Whatsapp</p>
+                                                                                                <p style="margin: 0;">+62 858-6490-0443</p>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -143,16 +151,23 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td style="padding:0;Margin:0;width:20px"></td>
                                                     <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse;border-spacing:0px;float:right">
+                                                        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
                                                             <tbody>
                                                                 <tr style="border-collapse:collapse">
                                                                     <td align="left" style="padding:0;Margin:0;width:280px">
                                                                         <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
                                                                             <tbody>
                                                                                 <tr style="border-collapse:collapse">
-                                                                                    <td align="left" style="padding:0;Margin:0;padding-right:25px;font-size:0px"><a href="tel:1500888" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank"><img src="https://ci3.googleusercontent.com/meips/ADKq_NavzW6lsKUGmvqgXgNKWM-1g16klPX4H_QQ-aP3wc2CDHCPmqusBq0fre7kIRdgVTCMnTunXx-g7qHrENn1mygyxLftOgEtrc59nuUEZn02AK3HXYxiIWLJ3ThCNp4i7Fm-IYTBiy8k7N5q6ivnuuPPtaIqEhDXwhXLoA8rM-D-ltPQ1Z1_807AinubKqTy=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202210.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" width="159" height="40" class="CToWUd" data-bit="iit"></a></td>
+                                                                                    <td align="center" style="padding:0;Margin:0;font-size:0px">
+                                                                                        <a href="https://www.instagram.com/wisdil_com/" style="color:black;font-size:12px;display:flex;text-decoration:unset;" target="_blank" data-saferedirecturl="https://www.instagram.com/wisdil_com/">
+                                                                                            <img src="https://mitra.wisdil.com/assets/images/iconemail/ig.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="40" class="CToWUd" data-bit="iit">
+                                                                                            <div style="display: grid;margin-left: 10px;margin-top: 10px;text-align: left;">
+                                                                                                <p style="margin: 0;">Instagram</p>
+                                                                                                <p style="margin: 0;">@wisdil_com</p>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -161,133 +176,23 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr style="border-collapse:collapse">
-                                    <td align="left" style="padding:0;Margin:0;padding-top:5px">
-                                        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:600px">
-                                            <tbody>
-                                                <tr style="border-collapse:collapse">
                                                     <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse;border-spacing:0px;float:left">
+                                                        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
                                                             <tbody>
                                                                 <tr style="border-collapse:collapse">
                                                                     <td align="left" style="padding:0;Margin:0;width:300px">
                                                                         <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
                                                                             <tbody>
                                                                                 <tr style="border-collapse:collapse">
-                                                                                    <td align="right" style="padding:0;Margin:0;font-size:0px"><a href="https://bca.id/2XvhKIV" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://bca.id/2XvhKIV&amp;source=gmail&amp;ust=1735920333436000&amp;usg=AOvVaw2lmM60r015DwFUUycOiWQY"><img src="https://ci3.googleusercontent.com/meips/ADKq_NZBuHSn8Ht8Cb5-JmQkb0e3uXH1Ie7fEGbmvyWD9BjOVp6Fw_1qxHIKS5lhrAvQLBBflpg0riUvBtiyGTyOL0bDD2ich0FJWBiO73sSgav9-pxdiOwFMEux0kmoqYJlPbwv6yVlTWug6G-T_6g1fqXtywFza-woWm-DFuL6VlPcjU4IW4W5KAOUJ6veJava8gpy-w=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202211_eiK.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="145" class="CToWUd" data-bit="iit"></a></td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                    <td style="padding:0;Margin:0;width:20px"></td>
-                                                    <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse;border-spacing:0px;float:right">
-                                                            <tbody>
-                                                                <tr style="border-collapse:collapse">
-                                                                    <td align="left" style="padding:0;Margin:0;width:280px">
-                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
-                                                                            <tbody>
-                                                                                <tr style="border-collapse:collapse">
-                                                                                    <td align="left" style="padding:0;Margin:0;font-size:0px"><a href="mailto:halobca@bca.co.id" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank"><img src="https://ci3.googleusercontent.com/meips/ADKq_NZs02V3noOU2g49S-pOakLvtsmnNYFIwwFV6-LoGTzKdxw5Jlkynoq2tX7WIUdCk2z4GSbRtLvmjbTIXsW53YKsWkI--fiG2eUn3LgPWmqFPBRZHGYjNNLiusqLS0-txD-p6b59D8Wb0LEev1CBdpcsCbeCPDMTRpL6W9FThs3ilOxo6981S0HmP6QqWzqJ=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202212.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" width="159" height="40" class="CToWUd" data-bit="iit"></a></td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr style="display:none;float:left;overflow:hidden;width:0;max-height:0;line-height:0;border-collapse:collapse">
-                                    <td align="left" style="padding:0;Margin:0;padding-top:5px">
-                                        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:600px">
-                                            <tbody>
-                                                <tr style="border-collapse:collapse">
-                                                    <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse;border-spacing:0px;float:left">
-                                                            <tbody>
-                                                                <tr style="border-collapse:collapse">
-                                                                    <td align="left" style="padding:0;Margin:0;width:290px">
-                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
-                                                                            <tbody>
-                                                                                <tr style="border-collapse:collapse">
-                                                                                    <td align="right" style="padding:0;Margin:0;font-size:0px"><a href="https://www.bca.co.id/id/Individu/layanan/Customer-Service/HaloBCA#download" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.bca.co.id/id/Individu/layanan/Customer-Service/HaloBCA%23download&amp;source=gmail&amp;ust=1735920333436000&amp;usg=AOvVaw1en4fJ-Q9Tij4gyIsbRxhk"><img src="https://ci3.googleusercontent.com/meips/ADKq_Nb5t0XrniN9ti4qG2j5EuTyfNu9tubyT3jbx1umQYkzTaZyQcDEXoL0iSbmI5uzsf0kXEPpwuWbjCrzz0vSoZG8d8Suq7R9L08H8gP42m5BGI7TcC-gcf3NRgZmgQd4jb4uP1ULdp4HgN4ctc05ryXV_FZqUXib3sy6AwHMlNQp19NzNHKW_4_0P-Km6s3gShwFrw=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202209_jHL.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="35" width="127" class="CToWUd" data-bit="iit"></a></td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                    <td style="padding:0;Margin:0;width:20px"></td>
-                                                    <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse;border-spacing:0px;float:right">
-                                                            <tbody>
-                                                                <tr style="border-collapse:collapse">
-                                                                    <td align="left" style="padding:0;Margin:0;width:290px">
-                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
-                                                                            <tbody>
-                                                                                <tr style="border-collapse:collapse">
-                                                                                    <td align="left" style="padding:0;Margin:0;font-size:0px"><a href="tel:1500888" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank"><img src="https://ci3.googleusercontent.com/meips/ADKq_NavzW6lsKUGmvqgXgNKWM-1g16klPX4H_QQ-aP3wc2CDHCPmqusBq0fre7kIRdgVTCMnTunXx-g7qHrENn1mygyxLftOgEtrc59nuUEZn02AK3HXYxiIWLJ3ThCNp4i7Fm-IYTBiy8k7N5q6ivnuuPPtaIqEhDXwhXLoA8rM-D-ltPQ1Z1_807AinubKqTy=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202210.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="35" width="139" class="CToWUd" data-bit="iit"></a></td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr style="display:none;float:left;overflow:hidden;width:0;max-height:0;line-height:0;border-collapse:collapse">
-                                    <td align="left" style="padding:0;Margin:0;padding-top:5px">
-                                        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:600px">
-                                            <tbody>
-                                                <tr style="border-collapse:collapse">
-                                                    <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse;border-spacing:0px;float:left">
-                                                            <tbody>
-                                                                <tr style="border-collapse:collapse">
-                                                                    <td align="left" style="padding:0;Margin:0;width:290px">
-                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
-                                                                            <tbody>
-                                                                                <tr style="border-collapse:collapse">
-                                                                                    <td align="right" style="padding:0;Margin:0;font-size:0px"><a href="https://bca.id/2XvhKIV" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://bca.id/2XvhKIV&amp;source=gmail&amp;ust=1735920333436000&amp;usg=AOvVaw2lmM60r015DwFUUycOiWQY"><img src="https://ci3.googleusercontent.com/meips/ADKq_NZBuHSn8Ht8Cb5-JmQkb0e3uXH1Ie7fEGbmvyWD9BjOVp6Fw_1qxHIKS5lhrAvQLBBflpg0riUvBtiyGTyOL0bDD2ich0FJWBiO73sSgav9-pxdiOwFMEux0kmoqYJlPbwv6yVlTWug6G-T_6g1fqXtywFza-woWm-DFuL6VlPcjU4IW4W5KAOUJ6veJava8gpy-w=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202211_eiK.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="35" width="127" class="CToWUd" data-bit="iit"></a></td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                    <td style="padding:0;Margin:0;width:20px"></td>
-                                                    <td valign="top" style="padding:0;Margin:0">
-                                                        <table cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse;border-spacing:0px;float:right">
-                                                            <tbody>
-                                                                <tr style="border-collapse:collapse">
-                                                                    <td align="left" style="padding:0;Margin:0;width:290px">
-                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border-spacing:0px">
-                                                                            <tbody>
-                                                                                <tr style="border-collapse:collapse">
-                                                                                    <td align="left" style="padding:0;Margin:0;font-size:0px"><a href="mailto:halobca@bca.co.id" style="text-decoration:underline;color:#ffffff;font-size:12px" target="_blank"><img src="https://ci3.googleusercontent.com/meips/ADKq_NZs02V3noOU2g49S-pOakLvtsmnNYFIwwFV6-LoGTzKdxw5Jlkynoq2tX7WIUdCk2z4GSbRtLvmjbTIXsW53YKsWkI--fiG2eUn3LgPWmqFPBRZHGYjNNLiusqLS0-txD-p6b59D8Wb0LEev1CBdpcsCbeCPDMTRpL6W9FThs3ilOxo6981S0HmP6QqWzqJ=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_87f201c65c904922f777b5e6ee3cb8b5/images/icon_informasi_bca_202212.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="35" width="139" class="CToWUd" data-bit="iit"></a></td>
+                                                                                    <td align="center" style="padding:0;Margin:0;font-size:0px">
+                                                                                        <a href="#" style="color:black;font-size:12px;display:flex;text-decoration:unset;" target="_blank" data-saferedirecturl="#">
+                                                                                            <img src="https://mitra.wisdil.com/assets/images/iconemail/email.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="40" class="CToWUd" data-bit="iit">
+                                                                                            <div style="display: grid;margin-left: 10px;margin-top: 10px;text-align: left;">
+                                                                                                <p style="margin: 0;">Email</p>
+                                                                                                <p style="margin: 0;">Wisdil.indonesia@gmail.com</p>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
