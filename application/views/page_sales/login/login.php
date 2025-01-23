@@ -494,7 +494,7 @@
                             cache: false,
                             // dataType: "json", // Expect JSON response
                             success: function(response) {
-                                $('#nama').val(emailInput);
+                                $('#email').val(emailInput);
                                 Swal.fire({
                                     title: "Berhasil Mengirim Ulang!",
                                     html: 'Sistem telah mengirimkan kode OTP ke email <span style="font-weight: bold;">' + emailInput + '</span>',

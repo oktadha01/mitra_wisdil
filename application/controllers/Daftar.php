@@ -73,6 +73,7 @@ class Daftar extends CI_Controller
                 'nama' => $nama,
                 'email' => $email,
                 'no_wa' => $no_wa,
+                'domisili' => $domisili,
                 'token' => $tokenCode,
             ];
 
