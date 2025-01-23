@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 $active_group = 'default';
 $query_builder = TRUE;
@@ -15,12 +15,12 @@ $db['default'] = array(
 	// 'username' => 'wisy2434_wisdil',
 	// 'password' => 'wisdil2023',
 
-	// 'database' => 'wisy2434_wisdil',
+	'database' => 'wisy2434_wisdil',
 
 	'username' => 'wisy2434_mitra',
 	'password' => 'mitra123',
 
-	'database' => 'wisy2434_mitra',
+	// 'database' => 'wisy2434_mitra',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

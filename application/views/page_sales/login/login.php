@@ -410,7 +410,6 @@
 
             });
             $('.sign-up-form').submit(function() {
-                alert('yaa');
                 event.preventDefault(); // Hentikan submit form
 
                 let isValid = true; // Flag validasi
@@ -440,15 +439,8 @@
                         domisili: domisili.val(),
                     },
                     cache: false,
-                    dataType: "text", // Expect text response
-                    success: function(responseText) {
-                        let response;
-                        try {
-                            response = JSON.parse(responseText);
-                        } catch (e) {
-                            console.error('JSON parse error: ', e);
-                            return;
-                        }
+                    dataType: "json", // Expect JSON response
+                    success: function(response) {
 
                         if (response.status == 'success') {
                             Swal.fire({
@@ -473,7 +465,8 @@
                         }
                     },
                     error: function(xhr, status, error) {
-                        console.error('AJAX Error: ', error); // Log error for debugging
+                        console.error('AJAX Error: ', error);
+                        console.log('Response: ', xhr.responseText); // Inspect response
                     }
                 });
             });
