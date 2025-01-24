@@ -40,22 +40,8 @@ class Withdrawal extends AUTH_Controller
         // Dapatkan semua data transaksi tanpa filter dari model
         $data['list'] = $this->M_withdrawal->_get_datatables_trx($id_sales);
 
-        $filtered_list = [];
-        $current_date = new DateTime(); // Tanggal saat ini
-
-        // Filter data berdasarkan tgl_event > 3 hari
-        foreach ($data['list'] as $trans) {
-            $tgl_event = new DateTime($trans->tgl_event);
-            $date_diff = $current_date->diff($tgl_event)->days; // Hitung selisih hari
-
-            // Periksa apakah tanggal event lebih dari 3 hari
-            if ($tgl_event < $current_date && $date_diff > 3) {
-                $filtered_list[] = $trans;
-            }
-        }
-
         $output = '';
-        foreach ($filtered_list as $trans) {
+        foreach ($data['list'] as $trans) {
             $output .= '<tr>' .
                 '<td><div class="form-check form-check-success">' .
                 '<label class="form-check-label">' .
@@ -65,9 +51,10 @@ class Withdrawal extends AUTH_Controller
                 '</div></td>' .
                 '<td>' . $trans->nm_event . '</td>' .
                 '<td>Rp. ' . number_format($trans->count * 1000, 0, ',', '.') . '</td>' .
-                '<td>' . date('d/m/Y', strtotime($trans->tgl_event)) . '</td>' .
+                // '<td>' . date('d/m/Y', strtotime($trans->tgl_event)) . '</td>' .
                 '</tr>';
         }
+
         echo $output;
     }
 

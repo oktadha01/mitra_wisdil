@@ -25,8 +25,8 @@ class M_withdrawal extends CI_Model
         $this->db->where('event.status_profit', 0);
 
         // Ensure the tgl_event is in the correct format and check against the specified date
-        // $this->db->where('event.tgl_event REGEXP', '^[0-9]{2}/[0-9]{2}/[0-9]{4}$');
-        // $this->db->where('STR_TO_DATE(event.tgl_event, "%d/%m/%Y") <=', $date);
+        $this->db->where('event.tgl_event REGEXP', '^[0-9]{2}/[0-9]{2}/[0-9]{4}$');
+        $this->db->where('STR_TO_DATE(event.tgl_event, "%d/%m/%Y") <=', $date);
 
         // Group by id_event
         $this->db->group_by('event.id_event');
