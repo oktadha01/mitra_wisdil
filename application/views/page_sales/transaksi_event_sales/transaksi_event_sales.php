@@ -18,9 +18,9 @@
 
             <div class="tab-slider--nav mt-3">
                 <ul class="tab-slider--tabs">
-                    <li class="tab-slider--trigger active" rel="tab1">Ditahan</li>
-                    <li class="tab-slider--trigger" rel="tab2">Diproses</li>
-                    <li class="tab-slider--trigger" rel="tab3">Dibayar</li>
+                    <li class="tab-slider--trigger active" rel="tab1">On hold</li>
+                    <li class="tab-slider--trigger" rel="tab2">In Process</li>
+                    <li class="tab-slider--trigger" rel="tab3">Paid</li>
                 </ul>
             </div>
             <div class="tab-slider--container">

@@ -61,70 +61,80 @@ class Withdrawal extends AUTH_Controller
     public function pengajuan()
     {
         $id_sales = $this->userdata['id_sales'];
-        $id_event = $this->input->post('id_event');
+        $data['sales'] = $this->M_withdrawal->m_get_datasales($id_sales);
 
-        // Define the query to get event data and calculate profit
-        $this->db->select('event.id_event, event.nm_event, event.tgl_event, event.status_profit,sales.nama, COUNT(*) as count');
-        $this->db->from('transaksi');
-        $this->db->join('event', 'event.id_event = transaksi.id_event');
-        $this->db->join('sales', 'event.id_sales_event = sales.id_sales');
-        $this->db->where('sales.id_sales', $id_sales);
-        $this->db->where('event.status_profit', 0);
-        $this->db->where_in('event.id_event', $id_event);
-        $this->db->group_by('event.id_event');
+        foreach ($data['sales'] as $sales) {
+            $an_rekening = $sales->nama_pemilik;
+            $nm_bank = $sales->bank;
+            $no_rekening = $sales->no_rekening;
+            if ($nm_bank == null) {
+                
+            } else {
+                $id_event = $this->input->post('id_event');
+                // Define the query to get event data and calculate profit
+                $this->db->select('event.id_event, event.nm_event, event.tgl_event, event.status_profit,sales.nama, COUNT(*) as count');
+                $this->db->from('transaksi');
+                $this->db->join('event', 'event.id_event = transaksi.id_event');
+                $this->db->join('sales', 'event.id_sales_event = sales.id_sales');
+                $this->db->where('sales.id_sales', $id_sales);
+                $this->db->where('event.status_profit', 0);
+                $this->db->where_in('event.id_event', $id_event);
+                $this->db->group_by('event.id_event');
 
-        $query = $this->db->get();
-        $result = $query->result();
-        $profit = 0;
-        $biaya_transaksi = 2775;
+                $query = $this->db->get();
+                $result = $query->result();
+                $profit = 0;
+                $biaya_transaksi = 2775;
 
-        // Calculate total profit
-        foreach ($result as $row) {
-            $profit += $row->count * 1000;
-            $nama_sales = $row->nama;
-            $event_id = $row->id_event;
-            $this->M_withdrawal->m_update_status_profit($event_id);
+                // Calculate total profit
+                foreach ($result as $row) {
+                    $profit += $row->count * 1000;
+                    $nama_sales = $row->nama;
+                    $event_id = $row->id_event;
+                    $this->M_withdrawal->m_update_status_profit($event_id);
+                }
+
+                // Generate withdrawal number
+                $this->db->select("MAX(CAST(RIGHT(no_wd, LOCATE('-', REVERSE(no_wd)) - 1) AS UNSIGNED)) as kode", FALSE);
+                $this->db->from('transaksi_sales');
+                $this->db->order_by('kode', 'DESC');
+                $this->db->limit(1);
+
+                $query = $this->db->get();
+                $last_counter_result = $query->row();
+                $last_counter = isset($last_counter_result->kode) ? $last_counter_result->kode : 0;
+                $new_counter = $last_counter + 1;
+
+                // Format the new withdrawal number
+                $no_wd = "WD-" . $id_sales . "-" . date('dm') . "-" . $new_counter;
+
+                // Prepare data for insertion
+                $data = [
+                    'sales_id'          => $id_sales,
+                    'no_wd'             => $no_wd,
+                    'event_id'          => implode(',', $id_event), // Convert array to string
+                    'tgl_pengajuan'     => date('d-m-Y'),
+                    'nominal_transaksi' => $profit,
+                    'biaya_transaksi'   => $biaya_transaksi,
+                    'rekening_an'       => $an_rekening,
+                    'bank_nm'           => $nm_bank,
+                    'rekening_no'       => $no_rekening,
+                    'total_transaksi'   => $profit - $biaya_transaksi
+                ];
+
+                // Insert data into the database
+                $this->M_withdrawal->m_insert_pengajuan($data);
+
+                // Prepare WhatsApp URL
+
+                $to_whatsappNumber = '6285864900443';
+                $message = urlencode("Yth. Admin, saya $nama_sales. Dengan ini saya mengajukan penarikan profit dengan kode withdrawal $no_wd. Mohon untuk segera ditinjau dan diproses. Terima kasih.");
+                $waUrl = "https://wa.me/$to_whatsappNumber?text=$message";
+
+                // Return the URL to be opened in a new tab
+                echo $waUrl;
+            }
         }
-
-        // Generate withdrawal number
-        $this->db->select("MAX(CAST(RIGHT(no_wd, LOCATE('-', REVERSE(no_wd)) - 1) AS UNSIGNED)) as kode", FALSE);
-        $this->db->from('transaksi_sales');
-        $this->db->order_by('kode', 'DESC');
-        $this->db->limit(1);
-
-        $query = $this->db->get();
-        $last_counter_result = $query->row();
-        $last_counter = isset($last_counter_result->kode) ? $last_counter_result->kode : 0;
-        $new_counter = $last_counter + 1;
-
-        // Format the new withdrawal number
-        $no_wd = "WD-" . $id_sales . "-" . date('dm') . "-" . $new_counter;
-
-        // Prepare data for insertion
-        $data = [
-            'sales_id'          => $id_sales,
-            'no_wd'             => $no_wd,
-            'event_id'          => implode(',', $id_event), // Convert array to string
-            'tgl_pengajuan'     => date('d-m-Y'),
-            'nominal_transaksi' => $profit,
-            'biaya_transaksi'   => $biaya_transaksi,
-            'rekening_an'       => $this->userdata->an_rekening,
-            'bank_nm'           => $this->userdata->nm_bank,
-            'rekening_no'       => $this->userdata->no_rekening,
-            'total_transaksi'   => $profit - $biaya_transaksi
-        ];
-
-        // Insert data into the database
-        $this->M_withdrawal->m_insert_pengajuan($data);
-
-        // Prepare WhatsApp URL
-
-        $to_whatsappNumber = '6285864900443';
-        $message = urlencode("Yth. Admin, saya $nama_sales. Dengan ini saya mengajukan penarikan profit dengan kode withdrawal $no_wd. Mohon untuk segera ditinjau dan diproses. Terima kasih.");
-        $waUrl = "https://wa.me/$to_whatsappNumber?text=$message";
-
-        // Return the URL to be opened in a new tab
-        echo $waUrl;
     }
 
     function get_data_transaksi_proses()

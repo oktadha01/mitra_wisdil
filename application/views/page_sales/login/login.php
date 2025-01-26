@@ -300,7 +300,7 @@
                             <span class="bg-border-span btn-view-ktp"><i class="bi bi-filetype-pdf"></i></span>
                         </div>
                         <div class="col-6 p-0 align-content-center">
-                            <h6 class="mb-0 font-weight-bold btn-view-ktp">file Proposal</h6>
+                            <h6 class="mb-0 font-weight-bold btn-view-ktp">file Foto KTP</h6>
                             <!-- <span class="small border-radius-gray text-file-pdf">text file pdf</span> -->
                         </div>
                         <div class="align-content-center align-right col-4 p-0">
@@ -406,7 +406,7 @@
                 if ($(this).data('page') == 'Daftar') {
                     populateKota();
                 }
-                history.replaceState(null, '', window.location.origin + '/' + $(this).data('page'));
+                history.replaceState(null, '', window.location.origin + '/mitra_wisdil/' + $(this).data('page'));
 
             });
             $('.sign-up-form').submit(function() {
@@ -739,7 +739,7 @@
                                 // alert('oke')
                                 $('#row-text-verifikasi .small').text('*Akun anda telah berhasil di aktivasi. Silahkan Input password untuk login ke akun mitra wisdil.*');
                                 $('#row-text-verifikasi').addClass('position-absolute').show();
-                                $('#btn-konfirmasi').removeClass('bg-success').addClass('bg-primary text-light').attr('data-action', 'login').text('login').show()
+                                $('#btn-konfirmasi').removeClass('bg-success').addClass('bg-primary text-light').attr('data-action', 'login').text('Submit').show()
                                 $('#no_wa, #code_referral, #nm_marketing, #btn-daftar').hide();
                                 $('#domisili').select2('destroy').hide();
                                 $('#row-input-password').addClass('mt-4').show();
@@ -848,7 +848,7 @@
                                             $('#nama').val() +
                                             "%5D%0A*Domisili%20%3A*%20%5B" +
                                             $('#domisili').find(":selected").text() +
-                                            "%5D%0A%0AMohon%20informasi%20lebih%20lanjut%20mengenai%20langkah%20pendaftaran%20dan%20persyaratan%20yang%20diperlukan.%0ATerima%20kasih%20atas%20perhatian%20dan%20bantuannya.%0A%0AHormat%20saya%2C%0AWisdil.com%20",
+                                            "%5D%0A%0AMohon%20informasi%20lebih%20lanjut%20mengenai%20langkah%20pendaftaran%20dan%20persyaratan%20yang%20diperlukan.%0ATerima%20kasih%20atas%20perhatian%20dan%20bantuannya.%0A%0AHormat%20saya%2C%0A" + $('#nama').val() + "%20",
                                             "_blank"
                                         );
                                     }
@@ -883,7 +883,8 @@
                 },
                 cache: false,
                 success: function(response) {
-                    console.log(response);
+                    // console.log(response);
+                    window.location.href = "<?= base_url('') ?>";
                 },
                 error: function(xhr, status, error) {
                     console.log('AJAX Error: ' + status + ' ' + error + ' ' + xhr.responseText); // Log error jika ada

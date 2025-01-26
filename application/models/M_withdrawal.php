@@ -42,7 +42,7 @@ class M_withdrawal extends CI_Model
     {
         $this->db->select('sales.nama, sales.email, sales.no_wa,bank_account.no_rekening,bank_account.nama_pemilik,bank_account.bank');
         $this->db->from('sales');
-        $this->db->join('bank_account', 'sales.id_sales = bank_account.id_sales');
+        $this->db->join('bank_account', 'sales.id_sales = bank_account.id_sales', 'Left');
         $this->db->where('sales.id_sales', $id_sales);
         // Execute the query
         $query = $this->db->get();

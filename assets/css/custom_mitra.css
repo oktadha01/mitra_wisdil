@@ -5,6 +5,25 @@
 	width: 92%;
 }
 
+.min-vh-28{
+	min-height: 28vh;
+}
+
+.swal2-actions{
+	gap: 15px;
+}
+
+.table .th-cus {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    border-radius: 13px;
+    background: #17a2b8;
+    border: 3px solid;
+    border-color: white !important;
+    color: white;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 1024px) {
 	.main-content {
 		left: unset;
@@ -279,12 +298,8 @@
 }
 
 .btn-tambah-event {
-	height: 59px;
-	width: auto;
-	font-size: 23px;
 	border: none;
-	border-radius: 40%;
-	border-bottom-left-radius: 0;
+	border-radius: 8px;
 	box-shadow: 0px 0px 4px 2px #ffffff, 3px 3px 4px 2px #00000030, inset 5px 4px 6px 0px #0000002e;
 	background: cornflowerblue;
 	float: inline-end;
@@ -331,7 +346,7 @@
 .border-navy {
 	color: white;
 	background: #607D8B;
-	padding: 12px 0px 19px;
+	padding: 0;
 	border-radius: 14px;
 	margin-bottom: 13px;
 	box-shadow: 0px 9px 10px -5px #607D8B;

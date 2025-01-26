@@ -75,7 +75,7 @@
                                                                             </div>
                                                                             <div>
                                                                                 <p>Hormat Kami,</p>
-                                                                                <p>Cv Tricore Tech Trend</p>
+                                                                                <p>Wisdil Indonesia</p>
 
                                                                             </div>
                                                                             <br>

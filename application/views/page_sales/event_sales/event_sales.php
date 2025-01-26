@@ -5,7 +5,7 @@
 </style>
 
 <div class="container p-0">
-    <div class="box-form mb-3" hidden>
+    <form class="box-form mb-3" hidden>
         <div class="row">
             <div class="col">
                 <i>"Biaya sistem tiketing untuk satu event adalah Rp 2.500.000. Namun, dengan diskon 50%, total biaya yang harus dibayarkan hanya Rp 1.250.000 per event. Silahkan Ajukan Event Anda"</i>
@@ -15,29 +15,29 @@
         <h5 class="font-weight-bold ml-3 mb-3"><i class="bi bi-person-vcard text-form-agency"> Form Input agency</i> </h5>
         <div class="row ">
             <div class="col-lg-3 col-md-3 col-12 mb-3">
-                <div class="input-wrapper">
-                    <label class="label-select2">Agency</label>
-                    <select class="select2 w-100" style="height:55px;" id="select-agency">
-                        <option value=''>-- Pilih Kota --</option>
+                <div class="input-wrapper ml-0 mr-0">
+                    <label class="label-select2">Agency <sup class="text-danger font-weight-bold">*</sup></label>
+                    <select class="select2 w-100" style="height:55px;" id="select-agency" required>
+                        <option value=''>-- Select City --</option>
                     </select>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-6 mb-3">
                 <div class="input-group">
                     <input type="text" id="email" class="col" required>
-                    <label class="label-in">Email</label>
+                    <label class="label-in">Email <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-6 mb-3">
                 <div class="input-group">
                     <input type="text" id="kontak" class="col" required>
-                    <label class="label-in">Kontak</label>
+                    <label class="label-in">No. WhatsApp <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-12">
                 <div class="input-group">
                     <input type="text" id="alamat-agency" class="col" required>
-                    <label class="label-in">Alamat</label>
+                    <label class="label-in">Address <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
         </div>
@@ -47,47 +47,47 @@
             <div class="col-lg-4 col-md-6 col-12 mb-3">
                 <div class="input-wrapper">
                     <input type="text" id="nm-event" class="" required>
-                    <label class="label-in">Nama event</label>
+                    <label class="label-in">Event Name <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
             <div class=" col-lg-3 col-md-6 col-12 mb-3">
                 <div class="input-wrapper">
-                    <label class="label-select">Kategori Event</label>
-                    <select type="text" id="kategori-event" class="">
-                        <option value="">-- Pilih Kategori --</option>
+                    <label class="label-select">Kategori Event <sup class="text-danger font-weight-bold">*</sup></label>
+                    <select type="text" id="kategori-event" class="" required>
+                        <option value="">-- Select Category --</option>
                     </select>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-6 mb-3">
                 <div class="input-wrapper">
                     <input data-provide="datepicker" data-date-autoclose="true" type="text" id="tgl-event" class="col" required>
-                    <label class="label-in">Tanggal</label>
+                    <label class="label-in">Date <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 col-6 mb-3">
                 <div class="input-wrapper">
                     <input type="time" class="col time24" id="jam-event" required>
-                    <label class="label-in">Jam</label>
+                    <label class="label-in">O'clock <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-6 mb-3">
                 <div class="input-wrapper">
                     <input type="text" id="mc" class="col" required>
-                    <label class="label-in">MC</label>
+                    <label class="label-in">MC <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-6 mb-3">
                 <div class="input-wrapper">
                     <input type="text" id="lokasi" class="col" required>
-                    <label class="label-in">Lokasi</label>
+                    <label class="label-in">Location <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12 mb-3">
                 <div class="input-wrapper">
-                    <label class="label-select2">Kota</label>
-                    <select class="select2 w-100" style="height:55px;" id="kota">
-                        <option value=''>-- Pilih Kota --</option>
+                    <label class="label-select2">Kota <sup class="text-danger font-weight-bold">*</sup></label>
+                    <select class="select2 w-100" style="height:55px;" id="kota" required>
+                        <option value=''>-- Select City --</option>
                     </select>
                 </div>
             </div>
@@ -95,8 +95,8 @@
         <div class=" row">
             <div class="col-12">
                 <div class="input-wrapper">
-                    <textarea type="text" id="alamat" class=""></textarea>
-                    <label class="label-in">Alamat</label>
+                    <textarea type="text" id="alamat" class="" required></textarea>
+                    <label class="label-in">Address <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
         </div>
@@ -117,17 +117,17 @@
                             <span class="small border-radius-gray text-file-pdf">text file pdf</span>
                         </div>
                         <div class="align-content-center align-right col-4 p-0">
-                            <button class="btn btn-sm btn-warning font-weight-bold btn-ubah-pdf" value="0">Ubah</button>
+                            <button class="btn btn-sm btn-warning font-weight-bold btn-ubah-pdf" value="0">Change</button>
                         </div>
                     </div>
                 </div>
                 <div id="form-upload-pdf" class="card mb-0">
                     <div class="header pt-2 pb-0">
-                        <label class="label-up">Upload Proposal</label>
+                        <label class="label-up">Upload Proposal <sup class="text-danger font-weight-bold">*</sup></label>
                     </div>
                     <div class="body pt-2">
                         <i class="font-10">File PDF Max 10MB<sup class="text-danger">*</sup></i>
-                        <input type="file" class="dropify" id="proposal" accept="application/pdf">
+                        <input type="file" class="dropify" id="proposal" accept="application/pdf" required>
                     </div>
                 </div>
             </div>
@@ -135,28 +135,24 @@
         <hr>
         <div class="row">
             <div class="col-6 pl-4">
-                <button class="btn col btn-danger batal">Batal <i class="bi bi-x-circle"></i></button>
+                <button class="btn col btn-danger batal">Cencel <i class="bi bi-x-circle"></i></button>
             </div>
             <div class="col-6 pr-4">
-                <button class="btn col btn-success simpan" value="simpan">Simpan <i class="bi bi-cloud-arrow-up"></i></button>
+                <button class="btn col btn-success simpan" value="simpan">Save <i class="bi bi-cloud-arrow-up"></i></button>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-        </div>
-    </div>
+    </form>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-lg-11 col-md-11 col-10 p-1">
+        <div class="col-12 p-1">
+            <button class="col-12 btn btn-info btn-tambah-event"> Create an Event <i class="bi bi-patch-plus"></i></button>
+        </div>
+        <div class="col-12 p-1">
             <div class=" search mb-3">
                 <input type="text" id="searchInput" placeholder="Search...">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-        </div>
-        <div class="col-lg-1 col-md-1 col-2 p-1">
-            <button class=" btn-info btn-tambah-event col"> <i class="bi bi-patch-plus"></i></button>
         </div>
     </div>
 </div>
@@ -193,14 +189,14 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-6">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Kontak</i></li>
+                            <li class="text-muted"><i>No. WhatsApp</i></li>
                             <li id="li-text-kontak" class="li-border-text">
                             </li>
                         </ul>
                     </div>
                     <div class="col-12">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Alamat</i></li>
+                            <li class="text-muted"><i>Address</i></li>
                             <li id="li-text-alamatuser" class="li-border-text">
                             </li>
                         </ul>
@@ -217,21 +213,21 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-6">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Kategori Event</i></li>
+                            <li class="text-muted"><i>Kategory Event</i></li>
                             <li id="li-text-kategori-event" class="li-border-text">
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-3 col-4">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Tanggal</i></li>
+                            <li class="text-muted"><i>Date</i></li>
                             <li id="li-text-tgl" class="li-border-text">
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-3 col-3">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Jam</i></li>
+                            <li class="text-muted"><i>O'clock</i></li>
                             <li id="li-text-jam" class="li-border-text">
                             </li>
                         </ul>
@@ -245,28 +241,28 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-6">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Lokasi</i></li>
+                            <li class="text-muted"><i>Location</i></li>
                             <li id="li-text-lokasi" class="li-border-text">
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-3 col-6">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Kota</i></li>
+                            <li class="text-muted"><i>City</i></li>
                             <li id="li-text-kota" class="li-border-text">
                             </li>
                         </ul>
                     </div>
                     <div class="col-12">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Alamat</i></li>
+                            <li class="text-muted"><i>Address</i></li>
                             <li id="li-text-alamatevent" class="li-border-text">
                             </li>
                         </ul>
                     </div>
                     <div class="col-12">
                         <ul class="list-inline">
-                            <li class="text-muted"><i>Deskripsi</i></li>
+                            <li class="text-muted"><i>Description</i></li>
                             <li id="li-text-desk" class="li-border-text pl-4 w-100">
                             </li>
                         </ul>

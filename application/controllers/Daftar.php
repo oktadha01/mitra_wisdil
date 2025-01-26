@@ -407,11 +407,7 @@ class Daftar extends CI_Controller
         if (isset($_COOKIE['userdaftar'])) {
             $userdaftar = json_decode($_COOKIE['userdaftar'], true);
             $this->userdaftar = $userdaftar['userdaftar'];
-            $code_referral = $this->userdaftar['code_referral'];
             $email = $this->userdaftar['email'];
-            $nama = $this->userdaftar['nama'];
-            $no_wa = $this->userdaftar['no_wa'];
-            $domisili = $this->userdaftar['domisili'];
             $password = $_POST['password'];
 
             // Update password dan data pengguna
@@ -445,10 +441,6 @@ class Daftar extends CI_Controller
             // Set cookie
             setcookie('userdata', json_encode($cookie_data), time() + (7 * 24 * 60 * 60), '/'); // 7 hari
             setcookie('userdaftar', '', 1, '/'); // Hapus cookie userdaftar
-
-            // Redirect ke halaman lain setelah selesai
-            header(base_url('')); // Ganti '/dashboard' dengan URL tujuan Anda
-            exit; // Pastikan script berhenti setelah redirect
         }
     }
 
@@ -491,63 +483,54 @@ class Daftar extends CI_Controller
         }
     }
 
-    function ins_token_pass()
-    {
-        // $email = 'oktadha01@gmail.com';
-        $email = $_POST['email'];
-        $token = md5($email . date("dmYHis"));
-        $this->M_auth->update_token_customer($email, $token);
-
-        $data['token'] = base_url('ResetPassword/token/') . $token;
-        $this->db->select("*");
-        $this->db->where("email", $email);
-        $query_ = $this->db->get('customer');
-        $data_cust = $query_->result();
-        foreach ($data_cust as $customer) {
-            $data['nm_customer'] = $customer->nm_customer;
-        }
-        $config = [
-            'mailtype'  => 'html',
-            'charset'   => 'utf-8',
-            'protocol'  => 'smtp',
-            'smtp_host' => 'mail.wisdil.com',
-            'smtp_user' => 'tiket@wisdil.com',  // Email gmail
-            'smtp_pass'   => 'tiket123!',  // Password gmail
-            // 'smtp_host' => 'smtp.gmail.com',
-            // 'smtp_user' => 'Oktadha01@gmail.com',  // Email gmail
-            // 'smtp_pass'   => 'rvcw cvny ibav czbh',  // Password gmail
-            'smtp_crypto' => 'ssl',
-            'smtp_port'   => 465,
-            'crlf'    => "\r\n",
-            'newline' => "\r\n"
-        ];
-
-        $email_to_user = $email;
-        $this->load->library('email', $config);
-        $this->email->from('tiket@wisdil.com', 'Wisdil.com');
-        $this->email->to($email_to_user);
-        $this->email->subject('Reset Password. Halo ' . $customer->nm_customer . ' Kami mendengar Anda memerlukan pengaturan ulang kata sandi. Klik tautan di bawah dan Anda akan diarahkan ke situs aman tempat Anda dapat menyetel password baru');
-
-        $body = $this->load->view('client/email/temp_rest_pass.php', $data, true);
-
-        $this->email->message($body);
-
-        // $this->email->send();
-        if ($this->email->send()) {
-            // Email sent successfully
-            echo "Email has been sent successfully.";
-        } else {
-            // Failed to send email
-            // You can log the error message or display it for debugging
-            echo "Failed to send email.";
-            echo $this->email->print_debugger(); // This will print the error message
-        }
-    }
-    // function logout()
+    // function ins_token_pass()
     // {
-    // 	$this->session->sess_destroy();
-    // 	$this->session->set_flashdata('sukses', 'Anda Telah Keluar dari Aplikasi');
-    // 	redirect('home');
+    //     // $email = 'oktadha01@gmail.com';
+    //     $email = $_POST['email'];
+    //     $token = md5($email . date("dmYHis"));
+    //     $this->M_auth->update_token_customer($email, $token);
+
+    //     $data['token'] = base_url('ResetPassword/token/') . $token;
+    //     $this->db->select("*");
+    //     $this->db->where("email", $email);
+    //     $query_ = $this->db->get('customer');
+    //     $data_cust = $query_->result();
+    //     foreach ($data_cust as $customer) {
+    //         $data['nm_customer'] = $customer->nm_customer;
+    //     }
+    //     $config = [
+    //         'mailtype'  => 'html',
+    //         'charset'   => 'utf-8',
+    //         'protocol'  => 'smtp',
+    //         'smtp_host' => 'mail.wisdil.com',
+    //         'smtp_user' => 'tiket@wisdil.com',  // Email gmail
+    //         'smtp_pass'   => 'tiket123!',  // Password gmail
+    //         'smtp_crypto' => 'ssl',
+    //         'smtp_port'   => 465,
+    //         'crlf'    => "\r\n",
+    //         'newline' => "\r\n"
+    //     ];
+
+    //     $email_to_user = $email;
+    //     $this->load->library('email', $config);
+    //     $this->email->from('tiket@wisdil.com', 'Wisdil.com');
+    //     $this->email->to($email_to_user);
+    //     $this->email->subject('Reset Password. Halo ' . $customer->nm_customer . ' Kami mendengar Anda memerlukan pengaturan ulang kata sandi. Klik tautan di bawah dan Anda akan diarahkan ke situs aman tempat Anda dapat menyetel password baru');
+
+    //     $body = $this->load->view('client/email/temp_rest_pass.php', $data, true);
+
+    //     $this->email->message($body);
+
+    //     // $this->email->send();
+    //     if ($this->email->send()) {
+    //         // Email sent successfully
+    //         echo "Email has been sent successfully.";
+    //     } else {
+    //         // Failed to send email
+    //         // You can log the error message or display it for debugging
+    //         echo "Failed to send email.";
+    //         echo $this->email->print_debugger(); // This will print the error message
+    //     }
     // }
     function logout()
     {

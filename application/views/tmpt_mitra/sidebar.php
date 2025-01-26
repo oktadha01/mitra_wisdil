@@ -12,7 +12,7 @@
                     <a href="<?= base_url('Transaksi_event_sales'); ?>" class="round-button">
                         <i class="bi bi-database-down"></i>
                     </a>
-                    <span class="tooltip">Transaksi</span>
+                    <span class="tooltip">Transaction</span>
                 </li>
                 <li>
                     <a href="<?= base_url('Dash_sales'); ?>" class="round-button">
@@ -24,7 +24,7 @@
                     <a href="<?= base_url('Histori_withdrawal'); ?>" class="round-button">
                         <i class="bi bi-clock-history"></i>
                     </a>
-                    <span class="tooltip">Histori</span>
+                    <span class="tooltip">History</span>
                 </li>
                 <li>
                     <a href="<?= base_url('Withdrawal'); ?>" class="round-button">

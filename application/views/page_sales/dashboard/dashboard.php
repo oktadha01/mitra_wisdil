@@ -10,7 +10,7 @@
                     <i class="fa fa-file-movie-o "></i>
                 </li>
                 <li>
-                    <span class="font-weight-bold">Total Event</span>
+                    <span class="font-weight-bold">Events</span>
                     <br>
                     <h3 class="text-primary font-weight-bold"><?= $total_event; ?></h3>
                 </li>
@@ -22,7 +22,7 @@
                     <i class="fa-solid fa-money-bill-transfer"></i>
                 </li>
                 <li>
-                    <span class="font-weight-bold">Total transaksi</span>
+                    <span class="font-weight-bold">Transaction</span>
                     <br>
                     <h3 class="text-primary font-weight-bold"><?= $total_transaksi; ?></h3>
                 </li>
@@ -34,7 +34,7 @@
                     <i class="fa-solid fa-sack-dollar"></i>
                 </li>
                 <li>
-                    <span class="font-weight-bold">Total Profit</span>
+                    <span class="font-weight-bold">Profit</span>
                     <br>
                     <h3 class="text-primary font-weight-bold">Rp. <?= number_format($total_profit, 0, ',', '.'); ?></h3>
                 </li>
@@ -46,7 +46,7 @@
                     <i class="fa-solid fa-sack-dollar"></i>
                 </li>
                 <li>
-                    <span class="font-weight-bold">Dalam Proses Penarikan</span>
+                    <span class="font-weight-bold">In Withdrawal Process</span>
                     <br>
                     <h3 class="text-primary font-weight-bold">Rp. <?= number_format($dalam_proses_penarikan, 0, ',', '.'); ?></h3>
                 </li>

@@ -62,8 +62,8 @@
 
                 // Loop through the JSON data
                 $.each(data, function(index, trans) {
-                    html += '<tr>';
-                    html += '<td><a href="javascript:void(0)" class="font-weight-bold btn-no-wd" data-no-wd="' + trans.no_wd + '" data-id-event="' + trans.id_event + '" data-nominal="' + trans.nominal_transaksi + '" data-biaya="' + trans.biaya_transaksi + '" data-total="' + trans.total_transaksi + '" data-toggle="modal" data-target="#exampleModalCenter">' + trans.no_wd + '</a></td>';
+                    html += '<tr class="btn-no-wd" data-no-wd="' + trans.no_wd + '" data-id-event="' + trans.id_event + '" data-nominal="' + trans.nominal_transaksi + '" data-biaya="' + trans.biaya_transaksi + '" data-total="' + trans.total_transaksi + '" data-toggle="modal" data-target="#exampleModalCenter">';
+                    html += '<td class="font-weight-bold">' + trans.no_wd + '</td>';
                     html += '<td>' + trans.tgl_pengajuan + '</td>';
                     html += '<td class="text-info">Rp. ' + trans.nominal_transaksi + '</td>';
                     html += '<td class="text-danger">Rp. ' + trans.biaya_transaksi + '</td>';
@@ -95,8 +95,32 @@
         var saldo = parseInt($('.saldo').text().toString().replace(/\./g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ''), 10) || 0;
         // Attach click event handler to the checkboxes
         $('.cheklis-send').click(function() {
-            // Recalculate nominal each time a checkbox is clicked
-            // nominal = parseInt($('.nominal').text().replace(/\./g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ''), 10) || 0;
+            if ($('.cek-payment').text() !== 'valid') {
+                const swalWithBootstrapButtons = Swal.mixin({
+                    customClass: {
+                        confirmButton: "btn btn-info",
+                        cancelButton: "btn btn-danger"
+                    },
+                    buttonsStyling: false
+                });
+                swalWithBootstrapButtons.fire({
+                    title: "There is no payment data!",
+                    text: "Please complete the payment details",
+                    icon: "error",
+                    showCancelButton: true,
+                    confirmButtonText: "Create payment data",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '<?php echo base_url('Profile'); ?>';
+
+                    } else {
+
+                    }
+                });
+                return false;
+            }
 
             // Get the data('id-event') value
             var eventId = $(this).data('id-event');
@@ -131,12 +155,38 @@
 
     }
     $('#btn-withdrawal').click(function() {
+        if ($('.cek-payment').text() !== 'valid') {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: "btn btn-info",
+                    cancelButton: "btn btn-danger"
+                },
+                buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+                title: "There is no payment data!",
+                text: "Please complete the payment details",
+                icon: "error",
+                showCancelButton: true,
+                confirmButtonText: "Create payment data",
+                cancelButtonText: "No, cancel!",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '<?php echo base_url('Profile'); ?>';
+
+                } else {
+
+                }
+            });
+            return false;
+        }
         swal({
                 title: "Apakah Anda yakin ingin melakukan penarikan dana?",
                 text: "Proses penarikan akan dilakukan dalam waktu 1x24 jam setelah konfirmasi. Pastikan semua data sudah benar sebelum melanjutkan.",
                 icon: "warning",
                 buttons: true,
-                dangerMode: true,
+                dangerMode: false,
             })
             .then((willDelete) => {
                 if (willDelete) {
@@ -171,18 +221,25 @@
 
     $('.table-wd').removeAttr('hidden', true).hide();
     $('.menu-proses-penarikan').click(function() {
-        $('.table-wd').show(100);
-        $(this).addClass('active');
+        $('.table-wd').toggle(150, function() {
+            if ($(this).is(':visible')) {
+                $('.menu-proses-penarikan').addClass('active');
+            } else {
+                $('.menu-proses-penarikan').removeClass('active');
+            }
+        });
     });
 
+
     $('.close-table-wd').click(function() {
-        $('.table-wd').hide(100);
+        $('.table-wd').hide(150);
         $('.menu-proses-penarikan').removeClass('active');
     });
 
     function btn_detail_no_wd() {
 
         $('.btn-no-wd').click(function() {
+
             $('.nominal').text($(this).data('nominal'));
             $('.biaya').text($(this).data('biaya'));
             $('.total').text($(this).data('total'));

@@ -4,7 +4,8 @@
             <img src="<?= base_url('assets\images\LOGO-WISDIL.jpg'); ?>" class="img-fluid img-logo-nav" alt="LOGO-WISDIL">
         </div>
         <div class="navbar-brand">
-            <a href="index.html" class="text-light"> &ensp; Mitra Wisdil</a>
+            <span class="text-light">Mitra Wisdil</span>
+            <!-- <a href="index.html" class="text-light"> &ensp; Mitra Wisdil</a> -->
         </div>
         <div class="navbar-right">
             <div class="user-account m-0 p-0">

@@ -90,6 +90,21 @@ class Event_sales extends AUTH_Controller
 
     public function simpan_data_event()
     {
+        // Load the Upload library
+        $config['upload_path'] = './upload/proposals/'; // Ensure this folder exists and is writable
+        $config['allowed_types'] = 'pdf';
+        $config['max_size'] = 2048; // Limit to 2MB
+        $config['file_name'] = 'proposal_' . time(); // Unique file name
+
+        $this->load->library('upload', $config);
+
+
+        // Check if the file is uploaded
+        if (!$this->upload->do_upload('proposal_file')) { // Ensure the input name in the form is `proposal_file`
+            $error = $this->upload->display_errors();
+            echo json_encode(['status' => 'error', 'message' => $error]);
+            return;
+        }
         $agency = $this->input->post('agency');
         if (is_numeric($agency)) {
             // return "Value is a number: $agency";
@@ -121,13 +136,6 @@ class Event_sales extends AUTH_Controller
             $id_user = $this->M_event_sales->M_simpan_data_agency($data_agancy);
         }
 
-        // Load the Upload library
-        $config['upload_path'] = './upload/proposals/'; // Ensure this folder exists and is writable
-        $config['allowed_types'] = 'pdf';
-        $config['max_size'] = 2048; // Limit to 2MB
-        $config['file_name'] = 'proposal_' . time(); // Unique file name
-
-        $this->load->library('upload', $config);
 
         $id_sales = $this->userdata['id_sales'];
 
@@ -149,13 +157,6 @@ class Event_sales extends AUTH_Controller
 
         // Insert event data and get the `id_event`
         $id_event = $this->M_event_sales->M_simpan_data_event($data_event);
-
-        // Check if the file is uploaded
-        if (!$this->upload->do_upload('proposal_file')) { // Ensure the input name in the form is `proposal_file`
-            $error = $this->upload->display_errors();
-            echo json_encode(['status' => 'error', 'message' => $error]);
-            return;
-        }
 
         // File uploaded successfully, get file data
         $file_data = $this->upload->data();

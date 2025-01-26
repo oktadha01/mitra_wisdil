@@ -16,12 +16,13 @@
     setTimeout(function() {
         $('.select-kota').val($('.select-kota').attr('data-value')).trigger('change');
         $('#bank').val($('#bank').attr('data-value')).trigger('change');
-
         if ($('#bank').val() == '') {
             $('#btn-edit-payment').removeClass('btn-warning').addClass('btn-info').text('Tambah Payment');
+            $('.card-in-pay').removeAttr('hidden', true).hide();
             $('#btn-simpan-payment').attr('data-action', 'insert');
         } else {
             $('#btn-edit-payment').removeClass('btn-info').addClass('btn-warning').text('Edit Payment');
+            $('.card-in-pay').removeAttr('hidden', true).show();
             $('#btn-simpan-payment').attr('data-action', 'update');
         }
     }, delayInMilliseconds);
@@ -37,6 +38,9 @@
         // $('.ubah-password, .ubah-email, .row-btn-logout').hide(200);
     });
     $('#btn-edit-payment').click(function() {
+        if ($(this).text() == 'Tambah Payment') {
+            $('.card-in-pay').show();
+        }
         $('#no-rekening, #nama-pemilik').removeAttr('readonly', true);
         $('#bank').removeAttr('disabled', true);
         $('#btn-batal-edit-payment, #btn-simpan-payment').show(200);
@@ -91,13 +95,7 @@
         } else if (action === 'update') {
             urlpost = "<?php echo site_url('Profile/update_payment'); ?>";
             // alert('Update Payment berhasil!');
-        } 
-        // batalorfinis_edit_payment();
-        // Swal.fire({
-        //     title: "Berhasil !",
-        //     text: "Data Berhasil Disimpan",
-        //     icon: "success"
-        // });
+        }
         let formData = new FormData();
         formData.append('bank', $('#bank').val());
         formData.append('no_rekening', $('#no-rekening').val());
@@ -193,6 +191,9 @@
     }
 
     function batalorfinis_edit_payment() {
+        if ($('#btn-edit-payment').text() == 'Tambah Payment') {
+            $('.card-in-pay').hide();
+        }
         $('#no-rekening, #nama-pemilik').attr('readonly', true);
         $('#bank').attr('disabled', true);
         $('#btn-batal-edit-payment, #btn-simpan-payment').hide(200);

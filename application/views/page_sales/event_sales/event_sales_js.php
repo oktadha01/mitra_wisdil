@@ -112,6 +112,16 @@
         var id_event = '';
         var id_proposal = '';
         $('.simpan').click(function() {
+            var form = document.querySelector('.box-form');
+            if (!form.checkValidity()) {
+                Swal.fire({
+                    title: "Proses gagal!",
+                    text: "Data gagal disimpan, harap lengkapi semua input yang wajib diisi.",
+                    icon: "error"
+                });
+                form.reportValidity(); // Menampilkan pesan error browser bawaan
+                return;
+            }
             var action = $(this).val();
             var id_user = $(this).data('id-user');
             var id_event = $(this).data('id-event');
@@ -150,6 +160,8 @@
             var proposalFile = $('#proposal')[0]?.files[0];
             if (proposalFile) {
                 formData.append('proposal_file', proposalFile);
+            } else {
+                return;
             }
 
             // Lakukan AJAX request
@@ -162,8 +174,18 @@
                 dataType: "json",
                 success: function(response) {
                     if (response.status === 'success') {
-                        alert('Data berhasil disimpan.');
+                        Swal.fire({
+                            title: "Berhasil !",
+                            text: "Data Berhasil Disimpan",
+                            icon: "success"
+                        });
                         load_data_event(); // Panggil fungsi untuk reload data
+                        $('.text-form-agency').text('Form Input Agency');
+                        $('.text-form-event').text('Form Input Event');
+                        $('.btn-tambah-event').show(300);
+                        $('.box-form').hide(300);
+                        $('.simpan').removeAttr('id-proposal data-id-event data-id-user').val('simpan');
+                        resetForm();
                     } else {
                         alert(response.message || 'Terjadi kesalahan.');
                     }
@@ -176,7 +198,7 @@
         });
 
 
-        $('.batal, .simpan').click(function() {
+        $('.batal').click(function() {
             $('.text-form-agency').text('Form Input Agency');
             $('.text-form-event').text('Form Input Event');
             $('.btn-tambah-event').show(300);
@@ -443,7 +465,7 @@
 
 
     $('textarea#summernote').summernote({
-        placeholder: 'Deskripsi Event',
+        placeholder: 'Deskripsi Event *',
         tabsize: 2,
         height: 300,
         toolbar: [
