@@ -143,6 +143,10 @@
                         </table>
                     </td>
                 </tr>
+            </tbody>
+        </table>
+        <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;background-repeat:repeat;background-position:center top">
+            <tbody>
                 <tr style="border-collapse:collapse">
                     <td align="center" style="padding:0;Margin:0">
                         <table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" background="https://ci3.googleusercontent.com/meips/ADKq_NYNEJg6rRFxe18qSaP_ggMRGdncLP5SXdm5_-KDhG1SUfBfFYKNc2YKhrNrjcLC74US0Yv37gEq1Y50i8eglL1QNuYzzLTPvk4dkf49Ql1nAAMeb2RqW6dx6nrDvwRiN28eQP4D9rbcQ7Ro0Cde0ZrG5F0rgheEJuAywyit=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_b15eb0a961c2691933d8a7513218d78d/images/bgputih.jpg" style="border-collapse:collapse;border-spacing:0px;background-color:#ffffff;background-repeat:no-repeat no-repeat;width:600px;background-image:url(https://ci3.googleusercontent.com/meips/ADKq_NYNEJg6rRFxe18qSaP_ggMRGdncLP5SXdm5_-KDhG1SUfBfFYKNc2YKhrNrjcLC74US0Yv37gEq1Y50i8eglL1QNuYzzLTPvk4dkf49Ql1nAAMeb2RqW6dx6nrDvwRiN28eQP4D9rbcQ7Ro0Cde0ZrG5F0rgheEJuAywyit=s0-d-e1-ft#https://ahxnz.stripocdn.email/content/guids/CABINET_b15eb0a961c2691933d8a7513218d78d/images/bgputih.jpg);background-position:left top">
@@ -237,7 +241,7 @@
                                                                                             <img src="https://mitra.wisdil.com/assets/images/iconemail/email.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="40" class="CToWUd" data-bit="iit">
                                                                                             <div style="display: grid;margin-left: 10px;margin-top: 10px;text-align: left;">
                                                                                                 <p style="margin: 0;">Email</p>
-                                                                                                <p style="margin: 0;">cs@wisdi.com</p>
+                                                                                                <p style="margin: 0;">cs@wisdil.com</p>
                                                                                             </div>
                                                                                         </a>
                                                                                     </td>
@@ -284,10 +288,5 @@
                 </tr>
             </tbody>
         </table>
-        <div class="yj6qo"></div>
-        <div class="adL">
-        </div>
-    </div>
-    <div class="adL">
     </div>
 </div>
