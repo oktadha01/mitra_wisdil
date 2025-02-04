@@ -247,9 +247,9 @@ class Daftar extends CI_Controller
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
             'protocol'  => 'smtp',
-            'smtp_host' => 'talang.iixcp.rumahweb.net',
-            'smtp_user' => 'tiket@wisdil.com',
-            'smtp_pass' => 'tiket123!',
+            'smtp_host' => 'mail.wisdil.com',
+            'smtp_user' => 'no-reply@wisdil.com',  // Email gmail
+            'smtp_pass'   => 'noreply@123',  // Password gmail
             'smtp_crypto' => 'ssl',
             'smtp_port'   => 465,
             'crlf'    => "\r\n",
@@ -257,7 +257,7 @@ class Daftar extends CI_Controller
         ];
 
         $this->load->library('email', $config);
-        $this->email->from('tiket@wisdil.com', 'Wisdil.com');
+        $this->email->from('no-reply@wisdil.com', 'mitra.wisdil.com');
         $this->email->to($data['email']);
         $this->email->subject($data['subject'] . ' - ' . $data['email']);
         $body = $this->load->view('page_sales/login/' . $data['temp'], $data, true);

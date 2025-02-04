@@ -210,16 +210,16 @@ class Event_sales extends AUTH_Controller
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
             'protocol'  => 'smtp',
-            'smtp_host' => 'talang.iixcp.rumahweb.net',
-            'smtp_user' => 'no-reply@wisdil.com',
-            'smtp_pass' => 'no-reply@wisdil',
+            'smtp_host' => 'mail.wisdil.com',
+            'smtp_user' => 'no-reply@wisdil.com',  // Email gmail
+            'smtp_pass'   => 'noreply@123',  // Password gmail
             'smtp_crypto' => 'ssl',
             'smtp_port'   => 465,
             'crlf'    => "\r\n",
             'newline' => "\r\n"
         ];
 
-        $email_to_user = 'oktadha01@gmail.com'; // Pastikan variabel $email sudah memiliki nilai
+        $email_to_user = $data['agency']['email'];
 
         // Validasi email
         if (!filter_var($email_to_user, FILTER_VALIDATE_EMAIL)) {
@@ -228,7 +228,7 @@ class Event_sales extends AUTH_Controller
         }
 
         $this->load->library('email', $config);
-        $this->email->from('tiket@wisdil.com', 'Wisdil.com');
+        $this->email->from('no-reply@wisdil.com', 'Wisdil.com');
         $this->email->to($email_to_user);
         $this->email->subject('Penajuan event telah kami terima');
 
