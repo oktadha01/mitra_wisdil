@@ -9,7 +9,7 @@
 <script src="<?= base_url('assets'); ?>/js/pages/forms/advanced-form-elements.js"></script>
 <script src="<?= base_url('assets'); ?>/bundles/c3.bundle.js"></script>
 <script src="<?= base_url('assets'); ?>/vendor/nouislider/nouislider.js"></script>
-<script src="<?= base_url('assets'); ?> /js/pages/ui/dialogs.js"></script>
+<script src="<?= base_url('assets'); ?>/js/pages/ui/dialogs.js"></script>
 <script src="<?= base_url('assets'); ?>/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
 <!-- select2 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
@@ -31,7 +31,7 @@
 <!-- dropify -->
 <script src="<?= base_url('assets'); ?>/vendor/dropify/js/dropify.min.js"></script>
 <script src="<?= base_url('assets'); ?>/js/pages/forms/dropify.js"></script>
-<script src="<?= base_url('assets'); ?> /js/menu_mobile.js"></script>
+<script src="<?= base_url('assets'); ?>/js/menu_mobile.js"></script>
 <script src="<?= base_url('assets'); ?>/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 <!-- <script src="<?= base_url('assets'); ?>/vendor/summernote/dist/summernote.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script> -->
