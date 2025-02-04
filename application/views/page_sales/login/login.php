@@ -155,13 +155,13 @@
                     <h2 class="title title-form">Sign in</h2>
                     <p class="social-text mb-0 text-center form-rest-pass" hidden>Masukkan alamat email Anda di bawah ini untuk mengatur ulang kata sandi Anda</p>
                     <div class="input-field form-login">
-                        <i class="fa fa-envelope"></i>
+                        <i class="bi bi-envelope-at"></i>
                         <input type="email" placeholder="Email" name="email" required autofocus autocomplete="current-email" />
                     </div>
                     <div class="input-field form-login">
-                        <i class="fas fa-lock"></i>
+                        <i class="bi bi-lock"></i>
                         <input type="password" placeholder="Password" id="password" name="password" required autofocus autocomplete="current-password" />
-                        <i class="toggle-password fa fa-eye" onclick="togglePasswordVisibility('password')"></i>
+                        <i class="toggle-password bi bi-eye-slash" onclick="togglePasswordVisibility('password')"></i>
                     </div>
                     <div class="remember" hidden>
                         <input type="checkbox" id="remember" name="remember" value="" checked="true">
@@ -186,18 +186,15 @@
                     </div>
 
                     <p class="social-text">Informasi Tentang System Bisa Lihat Sosial Media dibawah ini</p>
-                    <div class="social-media">
+                    <div class="social-media gap-5">
                         <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
+                            <i class="bi bi-whatsapp"></i>
                         </a>
                         <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
+                            <i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i class="bi bi-envelope-at"></i>
                         </a>
                     </div>
                 </form>
@@ -207,143 +204,76 @@
                     <h2 class="title text-center mb-4">Daftar Akun Mitra</h2>
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <!-- <label>Nama</label> -->
-                                <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" required="" class="form-control">
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">Nama Lengkap <sup class="text-danger">*</sup></label>
+                                <input type="text" name="nama" id="nama" required="" class="form-control">
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <!-- <label>Email</label> -->
-                                <input type="email" name="email" id="email" placeholder="Email" required="" class="form-control" value="">
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">Email <sup class="text-danger">*</sup></label>
+                                <input type="email" name="email" id="email" required="" class="form-control" value="">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-5">
-                            <div class="form-group">
-                                <!-- <label>No Wa</label> -->
-                                <input type="number" name="no_wa" id="no_wa" placeholder="No Wa" required="" class="form-control">
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">No Whatsapp <sup class="text-danger">*</sup></label>
+                                <input type="number" name="no_wa" id="no_wa" required="" class="form-control">
                             </div>
                         </div>
                         <div class="col-7">
-                            <div class="form-group">
-                                <!-- <label>Kota / kabupaten</label> -->
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">Domisil <sup class="text-danger">*</sup></label>
                                 <select name="domisili" id="domisili" class="select2 form-control">
-
                                 </select>
-                                <!-- <input type="text"  name="domisili" placeholder="Domisili Kota/Kabupaten" required="" class="form-control"> -->
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-
+                    <div id="row-password" class="row">
+                        <div class="col-12">
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">Buat Password <sup class="text-danger">*</sup></label>
+                                <input id="in-pass" type="password" class="form-control" value="">
+                                <span toggle="#password-field" class="bi bi-eye-slash field-icon toggle-password"></span>
+                            </div>
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">Ulangi Password <sup class="text-danger">*</sup></label>
+                                <input id="pass-sign-up" type="password" class="form-control" value="">
+                                <span toggle="#password-field" class="bi bi-eye-slash field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row-referral" class="row">
                         <div class="col-6">
-                            <div class="form-group">
-                                <!-- <label>No Wa</label> -->
-                                <input type="text" name="code_referral" id="code_referral" placeholder="Code Referral" class="form-control">
+                            <div class="form-group mb-1">
+                                <label class="text-black-50 mb-0">Code Referral </label>
+                                <input type="text" name="code_referral" id="code_referral" class="form-control">
                             </div>
                         </div>
 
-                        <div class="col-6">
-                            <div class="form-group">
-                                <!-- <label>No Wa</label> -->
-                                <input type="text" name="nm_marketing" id="nm_marketing" readonly class="form-control" hidden>
+                        <div class="col-6 pt-4">
+                            <div class="form-group mb-1">
+                                <!-- <label class="text-black-50 mb-0">Marketing <sup class="text-danger">*</sup></label> -->
+                                <input type="text" name="nm_marketing" id="nm_marketing" readonly class="form-control">
                             </div>
                         </div>
                     </div>
-                    <div id="row-upload-foto" class="row">
-                        <i class="ml-4 small">Silahkan upload foto ktp anda *</i>
-
-                        <div class="col-12">
-                            <div class="main-wrapper">
-                                <div class="upload-main-wrapper">
-                                    <div class="upload-wrapper">
-                                        <input type="file" id="upload-file" accept="image/*">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="224.3881704980842 176.8527621722847 221.13266283524905 178.8472378277154" width="221.13" height="178.85">
-                                            <defs>
-                                                <path d="M357.38 176.85C386.18 176.85 409.53 204.24 409.53 238.02C409.53 239.29 409.5 240.56 409.42 241.81C430.23 246.95 445.52 264.16 445.52 284.59C445.52 284.59 445.52 284.59 445.52 284.59C445.52 309.08 423.56 328.94 396.47 328.94C384.17 328.94 285.74 328.94 273.44 328.94C246.35 328.94 224.39 309.08 224.39 284.59C224.39 284.59 224.39 284.59 224.39 284.59C224.39 263.24 241.08 245.41 263.31 241.2C265.3 218.05 281.96 199.98 302.22 199.98C306.67 199.98 310.94 200.85 314.93 202.46C324.4 186.96 339.88 176.85 357.38 176.85Z" id="b1aO7LLtdW"></path>
-                                                <path d="M306.46 297.6L339.79 297.6L373.13 297.6L339.79 255.94L306.46 297.6Z" id="c4SXvvMdYD"></path>
-                                                <path d="M350.79 293.05L328.79 293.05L328.79 355.7L350.79 355.7L350.79 293.05Z" id="b11si2zUk"></path>
-                                            </defs>
-                                            <g>
-                                                <g>
-                                                    <g>
-                                                        <use xlink:href="#b1aO7LLtdW" opacity="1" fill="#ffffff" fill-opacity="1"></use>
-                                                    </g>
-                                                    <g>
-                                                        <g>
-                                                            <use xlink:href="#c4SXvvMdYD" opacity="1" fill="#363535" fill-opacity="1"></use>
-                                                        </g>
-                                                        <g>
-                                                            <use xlink:href="#b11si2zUk" opacity="1" fill="#363535" fill-opacity="1"></use>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <span class="file-upload-text">Upload Foto KTP</span>
-                                        <div class="file-success-text">
-                                            <svg version="1.1" id="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
-                                                <circle style="fill:rgba(0,0,0,0);stroke:#ffffff;stroke-width:10;stroke-miterlimit:10;" cx="49.799" cy="49.746" r="44.757" />
-                                                <polyline style="fill:rgba(0,0,0,0);stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="27.114,51 41.402,65.288 72.485,34.205" />
-                                            </svg> <span>Successfully</span>
-                                        </div>
-                                    </div>
-                                    <p id="file-upload-name"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="row-file-ktp" class="row li-list mb-4" hidden>
-                        <div class="align-content-around col-2 pl-0">
-                            <span class="bg-border-span btn-view-ktp"><i class="bi bi-filetype-pdf"></i></span>
-                        </div>
-                        <div class="col-6 p-0 align-content-center">
-                            <h6 class="mb-0 font-weight-bold btn-view-ktp">file Foto KTP</h6>
-                            <!-- <span class="small border-radius-gray text-file-pdf">text file pdf</span> -->
-                        </div>
-                        <div class="align-content-center align-right col-4 p-0">
-                            <button type="button" class="btn btn-sm btn-ubah-ktp float-end" value="ubah">Lihat</button>
-                        </div>
-                    </div>
-                    <div id="row-text-verifikasi" class="row mt-4" hidden>
-                        <div class="col-12">
-                            <i class="small">*Data sedang diverifikasi untuk memastikan keakuratannya. Kami akan memberikan informasi melalui email atau WhatsApp setelah proses selesai.*</i>
-                        </div>
-                    </div>
-                    <div id="row-text-cekulang" class="row">
-                    </div>
-                    <div id="row-token" class="row" hidden>
-
-                        <div class="col-12">
-                            <i class="small">*Silahkan cek email anda untuk mendapatkan kode konfirmasi*</i>
-                        </div>
-                        <div class="col-5">
-                            <div class="form-group">
-                                <!-- <label>No Wa</label> -->
-                                <input type="text" name="token" id="token" placeholder="Kode Konfirmasi" class="form-control">
-                            </div>
+                    <div id="row-aktivasi" class="row" hidden>
+                        <div class="col-12 mt-2 mb-2">
+                            <i class="small">*Silahkan cek email Anda untuk aktivasi akun mitra*</i>
+                            <p class="small">Jika tidak menerima pesan email, silahkan klik tombol "Kirim Ulang Email".</p>
                         </div>
                         <div class="col-7">
-                            <div class="form-group">
-                                <button type="button" id="btn-not-send-email" class="btn btn-sm-coral solid w-100">Tidak menerima Kode</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="row-input-password" class="row" hidden>
-                        <div class="col-12 mt-2">
-                            <div class="form-group">
-                                <input type="text" id="pass-sign-up" placeholder="Password" class="form-control">
+                            <div class="form-group mb-1">
+                                <button type="button" id="btn-not-send-email" class="btn btn-sm-coral solid w-100">Kirim Ulang Email</button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-12">
                             <button type="submit" id="btn-daftar" class="btn solid  w-100 ">Daftar</button>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <button type="button" id="btn-konfirmasi" class="btn bg-success solid w-100 float-right" data-action="konfir" hidden>Konfirmasi</button>
                         </div>
                     </div>
                 </form>
@@ -389,13 +319,21 @@
 
 
     <script>
+        <?php if ($this->session->flashdata('response')): ?>
+            Swal.fire({
+                title: '<?= $this->session->flashdata('response')['status'] ?>',
+                text: '<?= $this->session->flashdata('response')['message'] ?>',
+                icon: 'success',
+            });
+        <?php endif; ?>
+
         var code_referral = $('#code_referral');
         var nama = $('#nama');
         var email = $('#email');
         var no_wa = $('#no_wa');
         var domisili = $('#domisili');
-        $('#btn-konfirmasi,#row-upload-foto, #row-token,#row-file-ktp,#row-text-verifikasi, #nm_marketing, #row-input-password').removeAttr('hidden').hide();
-
+        var pass_sign_up = $('#pass-sign-up');
+        $('#nm_marketing, #row-input-password, #row-aktivasi').removeAttr('hidden').hide();
         $(document).ready(function() {
             if ("<?= $script; ?>" == "daftar") {
                 populateKota();
@@ -406,9 +344,10 @@
                 if ($(this).data('page') == 'Daftar') {
                     populateKota();
                 }
-                history.replaceState(null, '', window.location.origin + '/mitra_wisdil/' + $(this).data('page'));
+                history.replaceState(null, '', window.location.origin + '/' + $(this).data('page'));
 
             });
+
             $('.sign-up-form').submit(function() {
                 event.preventDefault(); // Hentikan submit form
 
@@ -417,13 +356,23 @@
                 $('input').removeClass('error'); // Hapus kelas error sebelumnya
 
                 // Validasi input
-                ['#nama', '#email', '#no_wa', '#domisili'].forEach(function(selector) {
+                ['#nama', '#email', '#no_wa', '#domisili', '#in-pass', '#pass-sign-up'].forEach(function(selector) {
                     let input = $(selector);
                     if (input.val().trim() === '') {
                         isValid = false;
                         input.addClass('error').after('<span class="error-message" style="color: red;">Field wajib diisi.</span>');
                     }
                 });
+
+                if ($('#in-pass').val() !== $('#pass-sign-up').val()) {
+                    isValid = false;
+                    $('#pass-sign-up').addClass('error').after('<span class="error-message" style="color: red;">Invalid Password!!</span>');
+                    Swal.fire({
+                        title: "Invalid Password !!",
+                        // text: "You clicked the button!",
+                        icon: "error"
+                    });
+                }
 
                 if (!isValid) return; // Jika tidak valid, hentikan proses
 
@@ -437,6 +386,7 @@
                         email: email.val(),
                         no_wa: no_wa.val(),
                         domisili: domisili.val(),
+                        password: pass_sign_up.val(),
                     },
                     cache: false,
                     dataType: "json", // Expect JSON response
@@ -445,17 +395,21 @@
                         if (response.status == 'success') {
                             Swal.fire({
                                 title: "Proses Berhasil",
-                                text: "Silahkan cek email anda untuk verfikasi email",
+                                html: 'Sistem telah mengirimkan email aktivasi akun mitra ke <span style="font-weight: bold;">' + email.val() + '</span>',
                                 icon: "success"
                             });
-                            $('#btn-daftar').hide();
-                            $('#row-upload-foto').show();
-                            $('#btn-konfirmasi').show();
-                            $('#row-token').show();
+                            window.open('https://mail.google.com/', '_blank');
+                            $('#btn-daftar,#row-password').hide();
+                            $('#row-aktivasi').show();
                             nama.attr('readonly');
                             email.attr('readonly');
                             no_wa.attr('readonly');
                             domisili.attr('disabled');
+                            if (code_referral.val() !== '') {
+                                code_referral.attr('readonly');
+                            } else {
+                                code_referral.hide();
+                            }
                         } else if (response.status == 'error') {
                             Swal.fire({
                                 title: "Proses Gagal",
@@ -470,9 +424,10 @@
                     }
                 });
             });
+
             $('#btn-not-send-email').click(function() {
                 Swal.fire({
-                    title: "Kirim ulang verifikasi email",
+                    title: "Kirim ulang email",
                     text: 'Harap gunakan email yang aktif untuk proses lebih lanjut.',
                     input: "text",
                     inputAttributes: {
@@ -486,7 +441,7 @@
                         // Proses untuk mengirim ulang verifikasi
                         let emailInput = result.value; // Ambil nilai input yang baru
                         $.ajax({
-                            url: "<?= base_url('Daftar/send_ulang_token') ?>",
+                            url: "<?= base_url('Daftar/send_ulang_aktivasi') ?>",
                             method: "POST",
                             data: {
                                 email: emailInput,
@@ -497,9 +452,10 @@
                                 $('#email').val(emailInput);
                                 Swal.fire({
                                     title: "Berhasil Mengirim Ulang!",
-                                    html: 'Sistem telah mengirimkan kode OTP ke email <span style="font-weight: bold;">' + emailInput + '</span>',
+                                    html: 'Sistem telah mengirimkan email aktivasi akun mitra ke <span style="font-weight: bold;">' + emailInput + '</span>',
                                     icon: "success"
                                 });
+                                window.open('https://mail.google.com/', '_blank');
 
                             },
                             error: function(xhr, status, error) {
@@ -507,8 +463,6 @@
                             }
                         });
 
-
-                        // Lakukan sesuatu dengan emailInput, misalnya kirim AJAX atau form submit
                     } else {
                         // Cancel button pressed
                         console.log('Proses dibatalkan');
@@ -541,44 +495,32 @@
                 });
             });
 
-            $('#btn-konfirmasi').click(function() {
-                if ($(this).data('action') == 'konfir') {
-                    konfirmasi_akun();
-                } else if ($(this).data('action') == 'update') {
-                    konfirmasi_ulang_akun();
-                } else if ($(this).data('action') == 'login') {
-                    konfirmasi_login();
+
+            $('#in-pass').on('input', function() {
+                $('#pass-sign-up').val('').removeClass('error');
+                $('.error-message').remove();
+            });
+
+            $('#pass-sign-up').on('input', function() {
+                if ($(this).val() !== $('#in-pass').val()) {
+                    $('.error-message').remove();
+                    $(this).addClass('error').after('<span class="error-message" style="color: red;">Invalid Password!!</span>');
+                } else {
+                    $(this).removeClass('error');
+                    $('.error-message').remove();
                 }
             });
 
-            $('.btn-view-ktp').click(function() {
-                Swal.fire({
-                    title: "",
-                    text: "",
-                    imageUrl: "<?= base_url('upload/ktp/'); ?>" + $(this).data('ktp'),
-                    imageWidth: 350,
-                    imageHeight: 200,
-                    imageAlt: "Custom image"
-                });
-            });
-
-            $('.btn-ubah-ktp').click(function() {
-
-                if ($(this).text() == 'Ubah') {
-                    $('#row-upload-foto').show(200);
-                    $('#row-file-ktp').hide(200);
-
-                } else if ($(this).text() == 'Lihat') {
-                    Swal.fire({
-                        title: "",
-                        text: "",
-                        imageUrl: "<?= base_url('upload/ktp/'); ?>" + $(this).data('ktp'),
-                        imageWidth: 350,
-                        imageHeight: 200,
-                        imageAlt: "Custom image"
-                    });
+            $(".toggle-password").click(function() {
+                var input = $(this).siblings('input');
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                    $(this).removeClass("bi-eye-slash").addClass('bi bi-eye');
+                } else {
+                    input.attr("type", "password");
+                    $(this).addClass("bi-eye-slash").removeClass('bi-eye');
                 }
-            })
+            });
 
         });
 
@@ -621,7 +563,6 @@
                 }
             });
         });
-
         $('#btn-submit').on('click', function() {
             let formData = new FormData();
             formData.append('email', $('.email-rest').val());
@@ -686,26 +627,30 @@
 
 
                 // Contoh: Mengisi input dengan data
-                // $('#code_referral').val(codeReferral);
+                $('#code_referral').val(codeReferral).attr('readonly', true);
                 $('#nama').val(nama).attr('readonly', true);
                 $('#email').val(email).attr('readonly', true);
                 $('#no_wa').val(noWa).attr('readonly', true);
                 $('#domisili').val(domisili).change().attr('disabled', true);
 
+                if (codeReferral == '') {
+                    $('#row-referral').hide();
+                } else {
+                    $('#row-referral').show();
+                }
+
                 cek_statusdaftar(email);
             } else {
-                console.error('Cookie userdata tidak ditemukan.');
-                $('#btn-daftar').show().attr('type', 'submit');;
-                $('#row-upload-foto').hide();
-                $('#btn-konfirmasi').hide();
-                $('#row-token').hide();
+                // console.error('Cookie userdata tidak ditemukan.');
+                $('#btn-daftar').show().attr('type', 'submit');
 
             }
         }
 
+        // cek_statusdaftar(email);
         function cek_statusdaftar(email) {
-            // alert('oke')
-            // var email = 'oktadha01@gmail.com';
+
+            // var email = 'drachmawati43@gmail.com';
             $.ajax({
                 type: 'POST',
                 url: "<?php echo site_url('Daftar/cek_statusdaftar'); ?>",
@@ -727,296 +672,22 @@
 
                             if (item.trim() === 'notfound') {
                                 $('#btn-daftar').hide().attr('type', 'button');
-                                $('#row-upload-foto, #btn-konfirmasi, #row-token').show();
+                                $('#row-aktivasi').show();
+                                $('#row-password').hide();
+
+                                // console.log('bbb')
+                            } else if (item.trim() == '0') {
                                 // console.log('aaaaa')
-                            } else if (item.trim() === '0') {
-                                $('#btn-daftar').hide().attr('type', 'button');
-                                $('#row-file-ktp, #row-text-verifikasi').show();
-                                $('#row-upload-foto, #btn-konfirmasi, #row-token, #row-text-cekulang').hide();
-                                $('.btn-view-ktp').attr('data-ktp', response.ktp || '');
-                                $('.btn-ubah-ktp').text('Lihat').attr('data-ktp', response.ktp || '');
-                            } else if (item.trim() === '1') {
-                                // alert('oke')
-                                $('#row-text-verifikasi .small').text('*Akun anda telah berhasil di aktivasi. Silahkan Input password untuk login ke akun mitra wisdil.*');
-                                $('#row-text-verifikasi').addClass('position-absolute').show();
-                                $('#btn-konfirmasi').removeClass('bg-success').addClass('bg-primary text-light').attr('data-action', 'login').text('Submit').show()
-                                $('#no_wa, #code_referral, #nm_marketing, #btn-daftar').hide();
-                                $('#domisili').select2('destroy').hide();
-                                $('#row-input-password').addClass('mt-4').show();
-                            }
-
-                            if (item.trim() === 'cekulang') {
-                                $('#btn-daftar').hide().attr('type', 'button');
-                                $('#row-file-ktp, #row-text-cekulang').show();
-                                $('#btn-konfirmasi').attr('data-action', 'update').show();
-                                $('.btn-view-ktp').attr('data-ktp', response.ktp || '');
-                                $('.btn-ubah-ktp').attr('data-ktp', response.ktp || '');
-                                $('#row-text-verifikasi').hide();
-                                cekulang_input();
-                            } else if (item.trim() === 'nama') {
-                                console.log('nama');
-                                $('#nama').addClass('error').attr('data-input', 'invalid').removeAttr('readonly').after('<span class="error-message" style="color: red;">Invalid Nama</span>');
-                                html += '<li class="small">Pastikan Nama cocok dengan indentitas <sup class="text-danger">*</sup></li>';
-                            } else if (item.trim() === 'no_wa') {
-                                console.log('no_wa');
-                                $('#no_wa').addClass('error').attr('data-input', 'invalid').removeAttr('readonly').after('<span class="error-message" style="color: red;">Invalid No Wa</span>');
-                                html += '<li class="small">Gunakan No Whatsapp yang  aktif <sup class="text-danger">*</sup></li>';
-
-                            } else if (item.trim() === 'ktp') {
-                                console.log('ktp');
-                                $('#upload-file').attr('data-input', 'update');
-                                $('.btn-ubah-ktp').text('Ubah').attr('style', 'background: #fff6a4 !important; color: #e7ad00 !important');
-                                html += '<li class="small">Pastikan KTP anda benar <sup class="text-danger">*</sup></li>';
-                            } else {
-                                // console.error("Status tidak dikenali:", item.trim());
                             }
                         });
-                        $('#row-text-cekulang').append(html);
                     } else {
                         console.error("Response status bukan string:", response.status);
                     }
                     // Periksa code_referral
-                    if (response.code_referral.trim() !== '' && response.status.trim() !== '1') {
-                        $('#code_referral, #nm_marketing').show().attr('readonly', true);
-                        $('#code_referral').val(response.code_referral).trigger('input');
-                    } else if (response.code_referral.trim() !== '' && response.status.trim() == '1') {
-                        $('#code_referral, #nm_marketing').hide();
-                    } else {
-
-                        $('#code_referral, #nm_marketing').hide();
-                    }
                 },
                 error: function(xhr, status, error) {
                     console.error("Kesalahan AJAX:", status, error);
                     alert("Data Gagal Diupload");
-                }
-            });
-        }
-
-        function konfirmasi_akun() {
-
-            const cookieData = getCookie('userdaftar');
-            if (cookieData) {
-                // Decode JSON string from cookie
-                const userData = JSON.parse(cookieData);
-                const userdaftar = userData.userdaftar || {};
-                const token = userdaftar.token || '';
-                const email = userdaftar.email || '';
-                if ($('#token').val() == token) {
-
-                    // console.log(token);
-
-                    // Validasi input file
-                    let fileInput = $('#upload-file')[0]; // Asumsikan ada input file dengan ID 'upload-file'
-                    if (!fileInput || fileInput.files.length === 0) {
-                        Swal.fire({
-                            title: "Prosess Gagal",
-                            text: "File gambar harus diunggah sebelum melanjutkan!",
-                            icon: "error"
-                        });
-                        return; // Hentikan eksekusi jika file gambar kosong
-                    }
-                    // hapus error input token
-                    $('.error-message').remove(); // Hapus pesan error sebelumnya
-                    $('#token').removeClass('error'); // Hapus kelas error sebelumnya
-
-                    // Buat objek FormData untuk mengirim data termasuk gambar
-                    let formData = new FormData();
-                    formData.append('ktp', fileInput.files[0]);
-
-                    $.ajax({
-                        url: "<?= base_url('Daftar/konfirmasi_akun') ?>",
-                        method: "POST",
-                        data: formData,
-                        cache: false,
-                        contentType: false, // Penting untuk pengiriman FormData
-                        processData: false, // Jangan proses data agar FormData tidak diubah
-                        dataType: "json", // Expect JSON response
-                        success: function(response) {
-                            // console.log(response);
-
-                            if (response.status == 'success') {
-                                Swal.fire({
-                                    title: "Konfirmasi Berhasil",
-                                    text: "Infokan ke admin untuk verifikasi lebih lanjut",
-                                    icon: "success"
-                                }).then((result) => {
-                                    if (result.isConfirmed) {
-                                        // Jalankan window.open setelah tombol "OK" diklik
-                                        window.open(
-                                            "https://wa.me/6285864900443?text=Halo%20Admin%2C%0ASaya%20bermaksud%20mengajukan%20pembuatan%20akun%20mitra.%20Berikut%20adalah%20data%20saya%3A%0A%0A*Nama%20%3A*%20%5B" +
-                                            $('#nama').val() +
-                                            "%5D%0A*Domisili%20%3A*%20%5B" +
-                                            $('#domisili').find(":selected").text() +
-                                            "%5D%0A%0AMohon%20informasi%20lebih%20lanjut%20mengenai%20langkah%20pendaftaran%20dan%20persyaratan%20yang%20diperlukan.%0ATerima%20kasih%20atas%20perhatian%20dan%20bantuannya.%0A%0AHormat%20saya%2C%0A" + $('#nama').val() + "%20",
-                                            "_blank"
-                                        );
-                                    }
-                                });
-
-                                cek_statusdaftar(email);
-                            }
-                        },
-                        error: function(xhr, status, error) {
-                            console.log('AJAX Error: ' + status + ' ' + error + ' ' + xhr.responseText); // Log error jika ada
-                        }
-                    });
-                } else if ($('#token').val() == '') {
-                    $('#token').addClass('error').after('<span class="error-message" style="color: red;">Kode wajib diisi.</span>');
-
-                } else {
-                    $('#token').addClass('error').after('<span class="error-message" style="color: red;">Invalid Kode</span>');
-                }
-            }
-        }
-
-        function konfirmasi_login() {
-            if ($('#pass-sign-up').val() == '') {
-                $('#pass-sign-up').addClass('error').after('<span class="error-message" style="color: red;">Password tidak boleh kosong !!</span>');
-                return;
-            }
-            $.ajax({
-                url: "<?= base_url('Daftar/konfirmasi_login') ?>",
-                method: "POST",
-                data: {
-                    password: $('#pass-sign-up').val()
-                },
-                cache: false,
-                success: function(response) {
-                    // console.log(response);
-                    window.location.href = "<?= base_url('') ?>";
-                },
-                error: function(xhr, status, error) {
-                    console.log('AJAX Error: ' + status + ' ' + error + ' ' + xhr.responseText); // Log error jika ada
-                }
-            });
-        }
-
-        function cekulang_input() {
-            const cookieData = getCookie('userdaftar');
-            if (cookieData) {
-                // Decode JSON string from cookie
-                const userData = JSON.parse(cookieData);
-                const userdaftar = userData.userdaftar || {};
-                const nama = userdaftar.nama || '';
-                const no_wa = userdaftar.no_wa || '';
-                $('#nama').on('input', function() {
-                    if ($(this).val() == nama) {
-                        $(this).addClass('error').after('<span class="error-message" style="color: red;">Invalid Nama</span>');
-                        $(this).attr('data-input', 'invalid');
-                    } else {
-                        $(this).attr('data-input', 'valid');
-                        $(this).removeClass('error').next('.error-message').remove();
-                    }
-                });
-                $('#no_wa').on('input', function() {
-                    if ($(this).val() == no_wa) {
-                        $(this).attr('data-input', 'invalid');
-                        $(this).addClass('error').after('<span class="error-message" style="color: red;">Invalid No WA</span>');
-                    } else {
-                        $(this).attr('data-input', 'valid');
-                        $(this).removeClass('error').next('.error-message').remove();
-                    }
-                });
-            }
-        }
-
-        function konfirmasi_ulang_akun() {
-            // Validasi input file
-            var filektp = '';
-            if ($('#upload-file').attr('data-input') == 'update') {
-                let fileInput = $('#upload-file')[0]; // Asumsikan ada input file dengan ID 'upload-file'
-                if (!fileInput || fileInput.files.length === 0) {
-                    Swal.fire({
-                        title: "Proses Gagal",
-                        text: "File KTP harus diunggah sebelum melanjutkan!",
-                        icon: "error"
-                    });
-                    return; // Hentikan eksekusi jika file gambar kosong
-                }
-                var filektp = fileInput.files[0];
-            }
-
-            // Validasi input nama
-            let namaInput = $('#nama');
-            if (namaInput.data('input') === 'invalid') {
-                Swal.fire({
-                    title: "Input Tidak Valid",
-                    text: "Nama tidak valid! Silakan periksa kembali.",
-                    icon: "error"
-                });
-                return; // Hentikan eksekusi jika nama tidak valid
-            }
-
-            // Validasi input no_wa
-            let noWAInput = $('#no_wa');
-            if (noWAInput.data('input') === 'invalid') {
-                Swal.fire({
-                    title: "Input Tidak Valid",
-                    text: "Nomor WA tidak valid! Silakan periksa kembali.",
-                    icon: "error"
-                });
-                return; // Hentikan eksekusi jika nomor WA tidak valid
-            }
-
-            // Hapus error sebelumnya
-            $('.error-message').remove(); // Hapus pesan error sebelumnya
-            $('#token').removeClass('error'); // Hapus kelas error sebelumnya
-
-            // Buat objek FormData untuk mengirim data termasuk gambar
-            let formData = new FormData();
-            formData.append('nama', namaInput.val());
-            formData.append('no_wa', noWAInput.val());
-            formData.append('ktp', filektp);
-
-            // Lakukan AJAX request
-            $.ajax({
-                url: "<?= base_url('Daftar/konfirmasi_ulang_akun') ?>", // URL server-side handler
-                method: "POST",
-                data: formData,
-                cache: false,
-                processData: false, // Jangan proses data seperti query string
-                contentType: false, // Jangan set header content-type
-                dataType: "json", // Expected JSON response
-                success: function(response) {
-                    if (response.status == 'berhasil') {
-                        Swal.fire({
-                            title: "Konfirmasi Berhasil",
-                            text: "Infokan ke admin untuk verifikasi lebih lanjut",
-                            icon: "success"
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // Jalankan window.open setelah tombol "OK" diklik
-                                window.open(
-                                    "https://wa.me/6285864900443?text=Halo%20Admin%2C%0ASaya%20bermaksud%20mengajukan%20pembuatan%20akun%20mitra.%20Berikut%20adalah%20data%20saya%3A%0A%0A*Nama%20%3A*%20%5B" +
-                                    $('#nama').val() +
-                                    "%5D%0A*Domisili%20%3A*%20%5B" +
-                                    $('#domisili').find(":selected").text() +
-                                    "%5D%0A%0AMohon%20informasi%20lebih%20lanjut%20mengenai%20langkah%20pendaftaran%20dan%20persyaratan%20yang%20diperlukan.%0ATerima%20kasih%20atas%20perhatian%20dan%20bantuannya.%0A%0AHormat%20saya%2C%0AWisdil.com%20",
-                                    "_blank"
-                                );
-                            }
-                        });
-                        var email = $('#email').val();
-                        cek_statusdaftar(email);
-                        $('#row-text-cekulang').hide();
-                        namaInput.attr('readonly', true)
-                        noWAInput.attr('readonly', true)
-                    } else {
-                        Swal.fire({
-                            title: "Proses Gagal",
-                            text: "Terjadi kesalahan. Silakan coba lagi.",
-                            icon: "error"
-                        });
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('AJAX Error: ', error); // Log error for debugging
-                    Swal.fire({
-                        title: "Proses Gagal",
-                        text: "Terjadi kesalahan pada proses pengiriman data.",
-                        icon: "error"
-                    });
                 }
             });
         }
@@ -1037,13 +708,13 @@
             var passwordInput = document.getElementById(inputId);
             var icon = document.querySelector(' .toggle-password');
             if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
+                $('#password').attr('type', 'password');
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
             } else {
-                passwordInput.type = "password";
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
+                $('#password').attr('type', 'text');
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
             }
         }
 

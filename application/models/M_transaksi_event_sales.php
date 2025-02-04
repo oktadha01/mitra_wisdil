@@ -7,13 +7,13 @@ class M_transaksi_event_sales extends CI_Model
     var $column_searchtrx = array('event.nm_event');
     var $ordertrx = array('event.id_event' => 'asc');
 
-    private function _get_datatables_trx()
+    private function _get_datatables_trx($id_sales)
     {
         $this->db->select('event.id_event, event.nm_event,event.tgl_event,event.status_profit, COUNT(*) as count');
         $this->db->from('transaksi');
         $this->db->join('event', 'event.id_event = transaksi.id_event');
         $this->db->join('sales', 'event.id_sales_event = sales.id_sales');
-        $this->db->where('sales.id_sales', 1);
+        $this->db->where('sales.id_sales', $id_sales);
         $this->db->group_by('event.id_event');
         $i = 0;
         foreach ($this->column_searchtrx as $trx) {
@@ -40,23 +40,23 @@ class M_transaksi_event_sales extends CI_Model
 
 
 
-    function get_datatablest()
+    function get_datatablest($id_sales)
     {
-        $this->_get_datatables_trx();
+        $this->_get_datatables_trx($id_sales);
         if (@$_POST['length'] != -1)
             $this->db->limit(@$_POST['length'], @$_POST['start']);
         $query = $this->db->get();
         return $query->result();
     }
-    function count_filtereds()
+    function count_filtereds($id_sales)
     {
-        $this->_get_datatables_trx();
+        $this->_get_datatables_trx($id_sales);
         $query = $this->db->get();
         return $query->num_rows();
     }
-    function count_all_trx()
+    function count_all_trx($id_sales)
     {
-        $this->_get_datatables_trx();
+        $this->_get_datatables_trx($id_sales);
         return $this->db->count_all_results();
     }
 }

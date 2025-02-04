@@ -1,6 +1,5 @@
 <div style="width:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;padding:0;Margin:0">
     <div style="background-color:#f6f6f6">
-
         <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top">
             <tbody>
                 <tr style="border-collapse:collapse">
@@ -42,6 +41,7 @@
                         </table>
                     </td>
                 </tr>
+
                 <tr style="border-collapse:collapse">
                     <td valign="top" style="padding:0;Margin:0">
                         <table cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;border-spacing:0px;table-layout:fixed!important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
@@ -58,68 +58,19 @@
                                                                     <td>
                                                                         <div align="left" style="Margin:0;font-size:14px;line-height:18px">
                                                                             <div>
-                                                                                Halo <?= $agency['agency'] ?? 'N/A' ?>,<br>Terima kasih atas pengajuan event Anda. Data yang Anda kirimkan telah berhasil kami terima dan akan segera kami proses. <br>Berikut detail pengajuan event Anda:
+                                                                                Halo <?= $nama ?>,<br>Untuk Aktivasi akun Mitra Wisdil, silakan klik tautan di bawah ini:
                                                                             </div>
+                                                                            <br>
+                                                                            <br>
                                                                             <div>
-                                                                                <hr>
-                                                                                <span>Data Agency:</span>
-                                                                                <ul style="padding-left: 10px;">
-                                                                                    <li style="display: flex;gap: 29px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Agency</span>
-                                                                                        <span>: <?= $agency['agency'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 42px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Email</span>
-                                                                                        <span>: <?= $agency['email'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 32px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Kontak</span>
-                                                                                        <span>: <?= $agency['kontak'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 33px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Alamat</span>
-                                                                                        <span>: <?= $agency['alamat'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                </ul>
-                                                                                <hr>
-                                                                                <span>Data Agency:</span>
-                                                                                <ul style="padding-left: 10px;">
-                                                                                    <li style="display: flex;gap: 43px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Event</span>
-                                                                                        <span>: <?= $event['nm_event'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 25px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Kategori</span>
-                                                                                        <span>: <?= $event['kategori_event'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 29px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Tanggal</span>
-                                                                                        <span>: <?= $event['tgl_event'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 54px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Jam</span>
-                                                                                        <span>: <?= $event['jam_event'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 63px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Mc</span>
-                                                                                        <span>: <?= $event['mc_by'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 51px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Kota</span>
-                                                                                        <span>: <?= $event['kota'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                    <li style="display: flex;gap: 35px;margin-bottom: 6px;">
-                                                                                        <span style="font-weight: bold;">Alamat</span>
-                                                                                        <span>: <?= $event['alamat'] ?? 'N/A' ?></span>
-                                                                                    </li>
-                                                                                </ul>
-                                                                                <hr>
+                                                                                <?= $url ?>
                                                                             </div>
+                                                                            <br>
+                                                                            <br>
                                                                             <div>
-                                                                                Untuk pengajuan event ini, terdapat biaya sewa sistem sebesar Rp2.250.000 yang mencakup pengelolaan, koordinasi, dan layanan terkait event Anda. Kami akan menghubungi Anda untuk penjadwalan meeting terkait event Anda.
+                                                                                Demi keamanan akun Anda, segera lakukan aktivasi.<br>
                                                                                 <br>
-                                                                                <br>
-                                                                                Terima kasih atas kepercayaan Anda kepada kami!
+                                                                                Jika anda tidak merasa melakukan pedaftaran sebagai mitra wisdil mohon abaikan email ini.
                                                                             </div>
                                                                             <div>
                                                                                 <p>Hormat Kami,</p>
@@ -237,7 +188,7 @@
                                                                                             <img src="https://mitra.wisdil.com/assets/images/iconemail/email.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="40" class="CToWUd" data-bit="iit">
                                                                                             <div style="display: grid;margin-left: 10px;margin-top: 10px;text-align: left;">
                                                                                                 <p style="margin: 0;">Email</p>
-                                                                                                <p style="margin: 0;">cs@wisdi.com</p>
+                                                                                                <p style="margin: 0;">cs@wisdil.com</p>
                                                                                             </div>
                                                                                         </a>
                                                                                     </td>
@@ -284,10 +235,5 @@
                 </tr>
             </tbody>
         </table>
-        <div class="yj6qo"></div>
-        <div class="adL">
-        </div>
-    </div>
-    <div class="adL">
     </div>
 </div>

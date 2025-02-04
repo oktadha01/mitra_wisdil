@@ -26,36 +26,15 @@ class Transaksi_event_sales extends AUTH_Controller
 
     function get_datatransaksi()
     {
-        // $id_user = $this->session->userdata('userdata')->id_user;
+        $id_sales = $this->userdata['id_sales'];
         // $privilage = $this->session->userdata('userdata')->privilage;
 
-        $list = $this->M_transaksi_event_sales->get_datatablest();
+        $list = $this->M_transaksi_event_sales->get_datatablest($id_sales);
         $data = array();
         $no = @$_POST['start'];
         foreach ($list as $prfm) {
 
-            // // tombol edit
-            // $editButton = '<a data-toggle="modal" data-target="#ubah-perform" class="btn btn-outline-warning btn-xs btn-edit" title="Ubah"
-            // data-id_event="' . $prfm->id_event . '"><i class="fa fa-edit"></i></a>';
 
-
-            // // tombol Hapus
-            // $hapusButton = ' &nbsp; <a href="#" onclick="confirmDelete(' . $prfm->id_event . ');"  class="btn btn-outline-danger btn-xs" title="Hapus"><i class="fa fa-trash-o"></i></a>';
-
-            // label
-            // $status_profit = '';
-            // $profit = '';
-            // if ($prfm->status_profit == '0') {
-            //     $profit = '<span class="text-success font-weight-bold">Rp. ' . number_format($prfm->count * 1000, 0, ',', '.') . '</span>';
-            //     $status_profit = '<span class="blm-ditarik">Belum Ditarik</span>';
-            // } elseif ($prfm->status_profit == '1') {
-            //     $profit = '<span class="font-weight-bold">Rp. ' . number_format($prfm->count * 1000, 0, ',', '.') . '</span>';
-            //     $status_profit = '<span class="diproses">Diproses</span>';
-            // } elseif ($prfm->status_profit == '2') {
-            //     $profit = '<span class="font-weight-bold">Rp. ' . number_format($prfm->count * 1000, 0, ',', '.') . '</span>';
-            //     $status_profit = '<span class="dibayar">Dibayar</span>';
-            // }
-            // Kalimat input
             $kalimat = $prfm->nm_event;
 
             // Pisahkan kalimat menjadi array kata
@@ -72,14 +51,6 @@ class Transaksi_event_sales extends AUTH_Controller
 
             // echo "Singkatan: " . $singkatan; // Output: RE
             $no++;
-            // $row = array();
-            // $row[] = $no . ".";
-            // $row[] = ' &nbsp; ' . '<td class="font-weight-medium"><div class="badge badge-dark shadow-lg rounded">' . $prfm->nm_event . '</div></td>';
-            // $row[] = $prfm->tgl_event;
-            // $row[] = $prfm->count;
-            // $row[] = $profit;
-            // $row[] = $status_profit;
-            // $data[] = $row;
             $row = [
                 'no' => $no . ".",
                 'inisial' => $singkatan,
@@ -91,16 +62,10 @@ class Transaksi_event_sales extends AUTH_Controller
             ];
             $data[] = $row;
         }
-        // $output = array(
-        //     "draw" => @$_POST['draw'],
-        //     "recordsTotal" => $this->M_transaksi_event_sales->count_all_trx(),
-        //     "recordsFiltered" => $this->M_transaksi_event_sales->count_filtereds(),
-        //     "data" => $row,
-        // );
         $output = array(
             "draw" => @$_POST['draw'],
-            "recordsTotal" => $this->M_transaksi_event_sales->count_all_trx(),
-            "recordsFiltered" => $this->M_transaksi_event_sales->count_filtereds(),
+            "recordsTotal" => $this->M_transaksi_event_sales->count_all_trx($id_sales),
+            "recordsFiltered" => $this->M_transaksi_event_sales->count_filtereds($id_sales),
             "data" => $data, // Ubah menjadi array meskipun hanya satu entri
         );
 

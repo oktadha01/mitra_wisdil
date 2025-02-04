@@ -4,6 +4,13 @@
             <h5>Profil</h5>
         </div> -->
     <!-- <div class="card-body"> -->
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class="alert alert-warning" role="alert">
+                <span class="text-cek-bio">Silakan lengkapi biodata diri Anda dengan mengunggah KTP dan data Payment.</span>
+            </div>
+        </div>
+    </div>
     <?php foreach ($sales as $data) { ?>
         <div class="row">
             <div class="col-lg-6 cla-md-6 col-12 p-0">
@@ -11,9 +18,26 @@
                     <div class="card-body">
                         <div class="row ">
                             <div class="col-lg-4 col-md-4 col-12">
-                                <img src="<?= base_url('upload/ktp/') . $data->ktp; ?>" class="img-fluid border-img" alt="">
+                                <?php if ($data->ktp == '') { ?>
+                                    <div id="btn-upload-file" class="border-in-ktp" hidden>
+                                        <i class="bi bi-file-earmark-arrow-up" style="font-size: xx-large;"></i>
+                                        <span>Upload file KTP</span>
+                                    </div>
+                                    <input type="file" id="btn-in-file" accept="image/*" hidden>
+                                    <img id="preview-file" class="img-fluid" src="">
+                                    <button id="btn-edit-file" class="btn btn-sm btn-warning col-12 mt-1 p-0" value="edit" hidden>Edit File</button>
+
+                                <?php } else { ?>
+                                    <div id="btn-upload-file" class="border-in-ktp" hidden>
+                                        <i class="bi bi-file-earmark-arrow-up" style="font-size: xx-large;"></i>
+                                        <span>Upload file KTP</span>
+                                    </div>
+                                    <input type="file" id="btn-in-file" accept="image/*" hidden>
+                                    <img id="preview-file" src="<?= base_url('upload/ktp/') . $data->ktp; ?>" class="img-fluid border-img" alt="">
+                                    <button id="btn-edit-file" class="btn btn-sm btn-warning col-12 mt-1 p-0" value="edit" hidden>Edit File</button>
+                                <?php } ?>
                             </div>
-                            <div class="col-8 col-md-8 col-12">
+                            <div class="col-lg-8 col-md-8 col-12 pt-3">
                                 <h4 class="text-uppercase font-weight-bold"><?= $data->nama; ?></h4>
                                 <ul class="pl-3">
                                     <li>
@@ -37,7 +61,7 @@
                             <div class="col-12 mb-4">
                                 <i>Data Domisili & No WhatsApp</i>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-12">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <div class="input-wrapper mb-3 ml-0 mr-0">
                                     <label class="label-in-profile">Domisili</label>
                                     <select class="select2 select-kota" id="kota" required="" disabled data-value="<?= $data->domisili; ?>">
@@ -45,7 +69,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-12">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <div class="input-group mb-3">
                                     <input type="number" id="kontak" class="w-100" required="" readonly value="<?= $data->no_wa; ?>">
                                     <label class="label-in-profile">No Whatsapp</label>

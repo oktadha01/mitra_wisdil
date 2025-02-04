@@ -25,7 +25,7 @@
                 dataType: "json",
                 success: function(response) {
                     if (response.data && response.data.length > 0) {
-                        // $('#transaksiList').empty(); // Kosongkan daftar sebelum memuat ulang
+                        $('#transaksiList').html(''); // Kosongkan daftar sebelum memuat ulang
 
                         $.each(response.data, function(index, item) {
                             var listItem = `
@@ -46,14 +46,15 @@
                             if (item.status_profit == '0') {
                                 $('#transaksiList-0').append(listItem);
                             } else if (item.status_profit == '1') {
-
                                 $('#transaksiList-1').append(listItem);
                             } else if (item.status_profit == '2') {
                                 $('#transaksiList-2').append(listItem);
                             }
+                            console.log(item.status_profit)
+                            
                         });
                     } else {
-                        $('#transaksiList').html('<li class="list-group-item text-center">Tidak ada data tersedia</li>');
+                        $('#transaksiList-0, #transaksiList-1, #transaksiList-2').html('<li class="row li-list p-2 pl-4 mb-3">Tidak ada data tersedia</li>');
                     }
                 },
                 error: function() {

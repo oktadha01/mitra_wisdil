@@ -326,7 +326,7 @@
                     });
                     action_detailEdit();
                 } else {
-                    $('#load-data-event').html('<li class="list-group-item text-center">Tidak ada data tersedia</li>');
+                    $('#load-data-event').html('<li class="row li-list p-2 pl-4 mb-3 text-center">Tidak ada data tersedia</li>');
                 }
             },
             error: function() {

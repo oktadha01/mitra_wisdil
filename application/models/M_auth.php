@@ -96,7 +96,7 @@ class M_auth extends CI_Model
 	{
 		$update = $this->db->set('token_password', $token)
 			->where('email', $email)
-			->update('customer');
+			->update('sales');
 		return $update;
 	}
 

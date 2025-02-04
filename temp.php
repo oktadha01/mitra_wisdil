@@ -1,6 +1,5 @@
 <div style="width:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;padding:0;Margin:0">
     <div style="background-color:#f6f6f6">
-
         <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top">
             <tbody>
                 <tr style="border-collapse:collapse">
@@ -26,6 +25,11 @@
                                                                                         </a>
                                                                                     </td>
                                                                                 </tr>
+                                                                                <tr>
+                                                                                    <td align="center">
+                                                                                        <!-- <img src="https://www.mitra.wisdil.com/assets/images/iconemail/success.png" width="300" alt=""> -->
+                                                                                    </td>
+                                                                                </tr>
                                                                             </tbody>
                                                                         </table>
                                                                     </td>
@@ -42,7 +46,6 @@
                         </table>
                     </td>
                 </tr>
-
                 <tr style="border-collapse:collapse">
                     <td valign="top" style="padding:0;Margin:0">
                         <table cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;border-spacing:0px;table-layout:fixed!important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
@@ -59,19 +62,56 @@
                                                                     <td>
                                                                         <div align="left" style="Margin:0;font-size:14px;line-height:18px">
                                                                             <div>
-                                                                                Halo <?= $nama ?>,<br>Berikut adalah kode verifikasi Anda untuk mendaftar sebagai mitra wisdil:
+                                                                                Halo $nama,
+                                                                                <br>Proses Aktivasi Anda berhasil. Kini, Mitra wisdil dapat diakses dari perangkat Anda.
+                                                                            </div>
+                                                                            <center>
+                                                                                <img src="https://www.mitra.wisdil.com/assets/images/iconemail/success.png" width="300" alt="">
+
+                                                                            </center>
+                                                                            <br>
+                                                                            Berikut adalah detail akun Mitra anda:
+                                                                            <br>
+                                                                            <br>
+                                                                            <div style="padding-left: 10px;">
+                                                                                <table>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="font-weight: bold;">Nama</td>
+                                                                                            <td> : </td>
+                                                                                            <td>nama</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="font-weight: bold;">Email</td>
+                                                                                            <td> : </td>
+                                                                                            <td>email</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="font-weight: bold;">No. Whatsapp </td>
+                                                                                            <td> : </td>
+                                                                                            <td>no_wa</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="font-weight: bold;">Domisili</td>
+                                                                                            <td> : </td>
+                                                                                            <td>domisili</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="font-weight: bold;">Referral</td>
+                                                                                            <td> : </td>
+                                                                                            <td>code</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="font-weight: bold;">Tanggal Aktivasi </td>
+                                                                                            <td> : </td>
+                                                                                            <td>code</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
                                                                             </div>
                                                                             <br>
-                                                                            <br>
                                                                             <div>
-                                                                                <?= $token ?>
-                                                                            </div>
-                                                                            <br>
-                                                                            <br>
-                                                                            <div>
-                                                                                Kode ini valid hanya bisa digunakan sekali.<br>
-                                                                                <br>
-                                                                                Jika anda tidak merasa melakukan pedaftaran sebbagai mitra wisdil mohon abaikan email ini dan segera melakukan reset password.
+                                                                                <p>Terima kasih telah bergabung dengan Mitra Wisdil. Kami berharap Anda mendapatkan pengalaman terbaik bersama kami.</p>
                                                                             </div>
                                                                             <div>
                                                                                 <p>Hormat Kami,</p>
@@ -109,7 +149,7 @@
                                                             <tbody>
                                                                 <tr style="border-collapse:collapse">
                                                                     <td align="center" style="padding:0;Margin:0">
-                                                                        <p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#333333;font-size:14px">Email ini dibuat secara otomatis. Mohon untuk tidak mengirimkan balasan ke email ini.<br><br>Untuk pertanyaan dan informasi perbankan lainnya.</p>
+                                                                        <p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#333333;font-size:14px">Email ini dibuat secara otomatis. Mohon untuk tidak mengirimkan balasan ke email ini.<br><br>Untuk pertanyaan dan informasi lainnya.</p>
                                                                         <!-- <p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#333333;font-size:14px">silakan menghubungi BCA</p> -->
                                                                     </td>
                                                                 </tr>
@@ -189,7 +229,7 @@
                                                                                             <img src="https://mitra.wisdil.com/assets/images/iconemail/email.png" alt="" style="display:block;border:0;outline:none;text-decoration:none" height="40" width="40" class="CToWUd" data-bit="iit">
                                                                                             <div style="display: grid;margin-left: 10px;margin-top: 10px;text-align: left;">
                                                                                                 <p style="margin: 0;">Email</p>
-                                                                                                <p style="margin: 0;">Wisdil.indonesia@gmail.com</p>
+                                                                                                <p style="margin: 0;">cs@wisdil.com</p>
                                                                                             </div>
                                                                                         </a>
                                                                                     </td>
@@ -219,7 +259,7 @@
                                                                         <br>
                                                                         <br>
                                                                         <br>
-                                                                        Wisdil merupakan jasa penjualan dan pembelian tiket secara online
+                                                                        Wisdil merupakan platform penjualan dan pembelian tiket secara online
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -236,10 +276,5 @@
                 </tr>
             </tbody>
         </table>
-        <div class="yj6qo"></div>
-        <div class="adL">
-        </div>
-    </div>
-    <div class="adL">
     </div>
 </div>

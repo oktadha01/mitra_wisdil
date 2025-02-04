@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class ResetPassword extends CI_Controller
 {
-    var $template = 'tmpt_client/index';
+    var $template = 'tmpt_mitra/index';
 
 
     public $session;
@@ -24,8 +24,8 @@ class ResetPassword extends CI_Controller
             $data['tittle']          = 'Wisdil.com';
             // $data['event_data_ready']      = $this->M_home->data_event_ready();
             // $data['banner']          = $this->M_home->data_banner();
-            $data['content']         = 'client/resetpassword/resetpassword';
-            $data['script']          = 'client/resetpassword/resetpassword_js';
+            $data['content']         = 'page_sales/resetpassword/resetpassword';
+            $data['script']          = 'page_sales/resetpassword/resetpassword_js';
             $this->load->view($this->template, $data);
         }
     }
@@ -35,7 +35,7 @@ class ResetPassword extends CI_Controller
         $token_password = $_POST['token'];
         $this->db->select("token_password");
         $this->db->where("token_password", $token_password);
-        $query_ = $this->db->get('customer');
+        $query_ = $this->db->get('sales');
         if ($query_->num_rows() > 0) {
             echo $query_->num_rows();
         }
@@ -48,13 +48,15 @@ class ResetPassword extends CI_Controller
 
         $this->db->select("token_password");
         $this->db->where("token_password", $token_password);
-        $query_ = $this->db->get('customer');
+        $query_ = $this->db->get('sales');
         if ($query_->num_rows() > 0) {
             echo 'success';
             $update = $this->db->set('password', md5($password))
                 ->set('token_password', '')
                 ->where('token_password', $token_password)
-                ->update('customer');
+                ->update('sales');
+                setcookie('userdata', '', 1, '/'); // Hapus cookie userdaftar
+
             return $update;
         } else {
             echo 'invalid';

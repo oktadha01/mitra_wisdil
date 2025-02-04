@@ -83,12 +83,12 @@
 
                         });
                     } else {
-                        $('#transaksiList').html('<li class="list-group-item text-center">Tidak ada data tersedia</li>');
+                        $('#historiList').html('<li class="row li-list p-2 pl-4 mb-3 text-center">Tidak ada data tersedia</li>');
                     }
                     action_view_detail();
                 },
                 error: function() {
-                    $('#transaksiList').html('<li class="list-group-item text-center text-danger">Gagal memuat data</li>');
+                    $('#historiList').html('<li class="list-group-item text-center text-danger">Gagal memuat data</li>');
                 }
             });
         }

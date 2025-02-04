@@ -7,6 +7,7 @@ class Profile extends AUTH_Controller
     public $M_profile;
     public $input;
     public $userdata;
+    public $upload;
     public function __construct()
     {
         parent::__construct();
@@ -23,6 +24,59 @@ class Profile extends AUTH_Controller
         $data['content']         = 'page_sales/profil/profil';
         $data['script']         = 'page_sales/profil/profil_js';
         $this->load->view($this->template, $data);
+    }
+    public function upload_ktp()
+    {
+        header('Content-Type: application/json');
+
+        if (!isset($_FILES['file_ktp']) || $_FILES['file_ktp']['error'] != 0) {
+            echo json_encode(['status' => 'error', 'message' => 'File tidak ditemukan atau terjadi kesalahan.']);
+            return;
+        }
+
+        $id_sales = $this->userdata['id_sales'];
+        $email = $this->userdata['email'];
+
+        // Cek data KTP lama di database
+        $old_ktp = $this->M_profile->getOldKtp($id_sales);
+
+        // Generate nama file baru
+        $hashed_name = substr(md5($email . date('YmdHis')), 0, 8);
+        $file_ext = pathinfo($_FILES['file_ktp']['name'], PATHINFO_EXTENSION);
+        $file_ktp = $hashed_name . '.' . $file_ext;
+
+        // Konfigurasi Upload
+        $config['upload_path']   = './upload/ktp/'; // Pastikan path benar
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['max_size']      = 2048; // Maksimal 2MB
+        $config['file_name']     = $file_ktp;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('file_ktp')) {
+            // Hapus file lama jika ada
+            if ($old_ktp && !empty($old_ktp->ktp)) {
+                $old_file_path = './upload/ktp/' . $old_ktp->ktp;
+                if (file_exists($old_file_path)) {
+                    unlink($old_file_path);
+                }
+            }
+
+            // Simpan file baru ke database
+            $update = $this->M_profile->updateKtp($id_sales, $file_ktp);
+
+            if ($update) {
+                echo json_encode([
+                    'status' => 'success',
+                    'file_url' => base_url('upload/ktp/' . $file_ktp),
+                    'file_name' => $file_ktp
+                ]);
+            } else {
+                echo json_encode(['status' => 'error', 'message' => 'Gagal menyimpan data ke database.']);
+            }
+        } else {
+            echo json_encode(['status' => 'error', 'message' => strip_tags($this->upload->display_errors())]);
+        }
     }
 
     function update_profil()

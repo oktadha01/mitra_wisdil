@@ -186,7 +186,7 @@ class Auth extends CI_Controller
 		$email = $_POST['email'];
 		$this->db->select("email");
 		$this->db->where("email", $email);
-		$query_ = $this->db->get('customer');
+		$query_ = $this->db->get('sales');
 		if ($query_->num_rows() > 0) {
 			echo $query_->num_rows();
 		}
@@ -201,10 +201,10 @@ class Auth extends CI_Controller
 		$data['token'] = base_url('ResetPassword/token/') . $token;
 		$this->db->select("*");
 		$this->db->where("email", $email);
-		$query_ = $this->db->get('customer');
+		$query_ = $this->db->get('sales');
 		$data_cust = $query_->result();
-		foreach ($data_cust as $customer) {
-			$data['nm_customer'] = $customer->nm_customer;
+		foreach ($data_cust as $sales) {
+			$data['nm_customer'] = $sales->nm_customer;
 		}
 		$config = [
 			'mailtype'  => 'html',
@@ -226,9 +226,9 @@ class Auth extends CI_Controller
 		$this->load->library('email', $config);
 		$this->email->from('tiket@wisdil.com', 'Wisdil.com');
 		$this->email->to($email_to_user);
-		$this->email->subject('Reset Password. Halo ' . $customer->nm_customer . ' Kami mendengar Anda memerlukan pengaturan ulang kata sandi. Klik tautan di bawah dan Anda akan diarahkan ke situs aman tempat Anda dapat menyetel password baru');
+		$this->email->subject('Reset Password. Halo ' . $sales->nm_customer . ' Kami mendengar Anda memerlukan pengaturan ulang kata sandi. Klik tautan di bawah dan Anda akan diarahkan ke situs aman tempat Anda dapat menyetel password baru');
 
-		$body = $this->load->view('client/email/temp_rest_pass.php', $data, true);
+		$body = $this->load->view('page_sales/login/temp_rest_pass.php', $data, true);
 
 		$this->email->message($body);
 

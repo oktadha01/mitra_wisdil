@@ -2,7 +2,10 @@
 
 <body data-theme="light" class="font-nunito">
     <?php $this->load->view('tmpt_mitra/navbar'); ?>
-    <?php $this->load->view('tmpt_mitra/sidebar'); ?>
+    <?php if ($this->uri->segment(1) !== 'ResetPassword') { ?>
+
+        <?php $this->load->view('tmpt_mitra/sidebar'); ?>
+    <?php } ?>
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -16,7 +19,7 @@
 ">
         <div class="main-content">
             <!-- <div class="container-fluid"> -->
-                <?php $this->load->view($content); ?>
+            <?php $this->load->view($content); ?>
             <!-- </div> -->
         </div>
     </div>

@@ -16,6 +16,19 @@ class M_profile extends CI_Model
         return $query->result();
     }
 
+    public function updateKtp($id_sales, $file_ktp)
+    {
+        $this->db->where('id_sales', $id_sales);
+        return $this->db->update('sales', ['ktp' => $file_ktp]);
+    }
+    public function getOldKtp($id_sales)
+    {
+        return $this->db->select('ktp')
+            ->from('sales')
+            ->where('id_sales', $id_sales)
+            ->get()
+            ->row();
+    }
     function M_update_profil($email, $kota, $kontak)
     {
         $update = $this->db->set('domisili', $kota)

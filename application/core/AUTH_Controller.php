@@ -3,10 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class AUTH_Controller extends CI_Controller
 {
+	public $User_model;
+	public $userdata;
+	public $session;
+	public $uri;
+
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('User_model');
 
 		// Ambil data cookie dan decode JSON-nya
 		$cookie_data = isset($_COOKIE['userdata']) ? json_decode($_COOKIE['userdata'], true) : null;
@@ -24,6 +28,16 @@ class AUTH_Controller extends CI_Controller
 		if (empty($cookie_data) || $cookie_data['status'] !== 'Logged in') {
 			redirect('Login');
 		}
+		// // Cek data sales di database
+		// $this->db->select('*');
+		// $this->db->from('sales');
+		// $this->db->where('id_sales', $this->userdata['id_user']);
+		// $query = $this->db->get();
+		// $sales_data = $query->row();
+		// if (empty($sales_data)) {
+		// 	// Jika data sales kosong, redirect ke halaman login/logout
+		// 	redirect('Login/logout');
+		// }
 	}
 
 
