@@ -397,8 +397,11 @@
                                 title: "Proses Berhasil",
                                 html: 'Sistem telah mengirimkan email aktivasi akun mitra ke <span style="font-weight: bold;">' + email.val() + '</span>',
                                 icon: "success"
+                            }).then((result) => {
+                                if (result.isConfirmed || result.dismiss === Swal.DismissReason.cancel) {
+                                    window.open('https://mail.google.com/', '_blank');
+                                }
                             });
-                            window.open('https://mail.google.com/', '_blank');
                             $('#btn-daftar,#row-password').hide();
                             $('#row-aktivasi').show();
                             nama.attr('readonly');
@@ -454,8 +457,11 @@
                                     title: "Berhasil Mengirim Ulang!",
                                     html: 'Sistem telah mengirimkan email aktivasi akun mitra ke <span style="font-weight: bold;">' + emailInput + '</span>',
                                     icon: "success"
+                                }).then((result) => {
+                                    if (result.isConfirmed || result.dismiss === Swal.DismissReason.cancel) {
+                                        window.open('https://mail.google.com/', '_blank');
+                                    }
                                 });
-                                window.open('https://mail.google.com/', '_blank');
 
                             },
                             error: function(xhr, status, error) {
