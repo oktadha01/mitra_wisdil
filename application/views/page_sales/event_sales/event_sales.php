@@ -5,7 +5,7 @@
 </style>
 
 <div class="container p-0">
-    <form class="box-form mb-3" hidden>
+    <form id="save-event" class="box-form mb-3" hidden>
         <div class="row">
             <div class="col">
                 <i>"Biaya sistem tiketing untuk satu event adalah Rp 2.500.000. Namun, dengan diskon 50%, total biaya yang harus dibayarkan hanya Rp 1.250.000 per event. Silahkan Ajukan Event Anda"</i>
@@ -52,7 +52,7 @@
             </div>
             <div class=" col-lg-3 col-md-6 col-12 mb-3">
                 <div class="input-wrapper">
-                    <label class="label-select">Kategori Event <sup class="text-danger font-weight-bold">*</sup></label>
+                    <label class="label-select">Select Category <sup class="text-danger font-weight-bold">*</sup></label>
                     <select type="text" id="kategori-event" class="" required>
                         <option value="">-- Select Category --</option>
                     </select>
@@ -67,7 +67,7 @@
             <div class="col-lg-2 col-md-4 col-6 mb-3">
                 <div class="input-wrapper">
                     <input type="time" class="col time24" id="jam-event" required>
-                    <label class="label-in">O'clock <sup class="text-danger font-weight-bold">*</sup></label>
+                    <label class="label-in">clock <sup class="text-danger font-weight-bold">*</sup></label>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-12 mb-3">
                 <div class="input-wrapper">
-                    <label class="label-select2">Kota <sup class="text-danger font-weight-bold">*</sup></label>
+                    <label class="label-select2">Select City <sup class="text-danger font-weight-bold">*</sup></label>
                     <select class="select2 w-100" style="height:55px;" id="kota" required>
                         <option value=''>-- Select City --</option>
                     </select>
@@ -138,7 +138,7 @@
                 <button class="btn col btn-danger batal">Cencel <i class="bi bi-x-circle"></i></button>
             </div>
             <div class="col-6 pr-4">
-                <button class="btn col btn-success simpan" value="simpan">Save <i class="bi bi-cloud-arrow-up"></i></button>
+                <button type="submit" class="btn col btn-success simpan" data-action="simpan">Save <i class="bi bi-cloud-arrow-up"></i></button>
             </div>
         </div>
     </form>

@@ -111,21 +111,28 @@
         var id_user = '';
         var id_event = '';
         var id_proposal = '';
-        $('.simpan').click(function() {
-            var form = document.querySelector('.box-form');
-            if (!form.checkValidity()) {
-                Swal.fire({
-                    title: "Proses gagal!",
-                    text: "Data gagal disimpan, harap lengkapi semua input yang wajib diisi.",
-                    icon: "error"
-                });
-                form.reportValidity(); // Menampilkan pesan error browser bawaan
-                return;
-            }
-            var action = $(this).val();
-            var id_user = $(this).data('id-user');
-            var id_event = $(this).data('id-event');
-            var id_proposal = $(this).data('id-proposal');
+        $('#save-event').submit(function() {
+            event.preventDefault(); // Hentikan submit form
+            let isValid = true; // Flag validasi
+            $('.error-message').remove(); // Hapus pesan error sebelumnya
+            $('input').removeClass('error'); // Hapus kelas error sebelumnya
+
+            // Validasi input
+            ['#select-agency', '#email', '#kontak', '#alamat-agency', '#nm-event', '#kategori-event', '#tgl-event', '#jam-event', '#mc', '#lokasi', '#kota', '#alamat'].forEach(function(selector) {
+                let input = $(selector);
+                if (input.val().trim() === '') {
+                    isValid = false;
+                    input.addClass('error').after('<span class="error-message" style="color: red;">Field wajib diisi.</span>');
+                }
+            });
+
+            if (!isValid) return; // Jika tidak valid, hentikan proses
+
+            var action = $(this).find('.simpan').data('action');
+            alert(action);
+            var id_user = $(this).find('.simpan').data('id-user');
+            var id_event = $(this).find('.simpan').data('id-event');
+            var id_proposal = $(this).find('.simpan').data('id-proposal');
             var sendUrl = action === 'simpan' ?
                 '<?= site_url('Event_sales/simpan_data_event') ?>' :
                 '<?= site_url('Event_sales/edit_data_event') ?>';
@@ -148,6 +155,7 @@
             formData.append('kategori_event', kategori_event.val());
             formData.append('text_kategori_event', kategori_event.text());
             formData.append('tgl_event', tgl_event.val());
+            formData.append('batas_pesan', tgl_event.val());
             formData.append('jam_event', jam_event.val());
             formData.append('mc', mc.val());
             formData.append('lokasi', lokasi.val());
@@ -162,6 +170,7 @@
                 formData.append('proposal_file', proposalFile);
             } else {
                 return;
+                // alert('Silakan pilih file sebelum mengirim.');
             }
 
             // Lakukan AJAX request
@@ -184,7 +193,7 @@
                         $('.text-form-event').text('Form Input Event');
                         $('.btn-tambah-event').show(300);
                         $('.box-form').hide(300);
-                        $('.simpan').removeAttr('id-proposal data-id-event data-id-user').val('simpan');
+                        $('.simpan').removeAttr('id-proposal data-id-event data-id-user').attr('data-action', 'simpan');
                         resetForm();
                     } else {
                         alert(response.message || 'Terjadi kesalahan.');
@@ -197,13 +206,12 @@
             });
         });
 
-
         $('.batal').click(function() {
             $('.text-form-agency').text('Form Input Agency');
             $('.text-form-event').text('Form Input Event');
             $('.btn-tambah-event').show(300);
             $('.box-form').hide(300);
-            $('.simpan').removeAttr('id-proposal data-id-event data-id-user').val('simpan');
+            $('.simpan').removeAttr('id-proposal data-id-event data-id-user').attr('data-action', 'simpan');
             resetForm();
         });
 
@@ -247,10 +255,11 @@
 
             $('.simpan')
                 .attr({
+                    'data-action': 'edit', // Set the 'data-id-event' attribute
                     'data-id-proposal': $(this).data('id-proposal'), // Set the 'data-id-event' attribute
                     'data-id-event': $(this).data('id-event'), // Set the 'data-id-event' attribute
                     'data-id-user': $(this).data('id-user') // Set the 'data-id-user' attribute
-                }).val('edit');
+                });
 
             $('.text-file-pdf').text($('#li-text-event').text());
             form_upload_pdf(0);

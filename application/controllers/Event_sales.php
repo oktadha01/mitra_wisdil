@@ -238,10 +238,10 @@ class Event_sales extends AUTH_Controller
 
         // Kirim email dan cek hasilnya
         if ($this->email->send()) {
-            log_message('info', 'Email berhasil dikirim ke: ' . $email_to_user);
+            // log_message('info', 'Email berhasil dikirim ke: ' . $email_to_user);
             return true;
         } else {
-            log_message('error', 'Email gagal dikirim: ' . $this->email->print_debugger());
+            // log_message('error', 'Email gagal dikirim: ' . $this->email->print_debugger());
             return false;
         }
     }
