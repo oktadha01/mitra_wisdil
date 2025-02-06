@@ -162,7 +162,7 @@
                                     </td>
                                 </tr>
                                 <tr style="border-collapse:collapse">
-                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left: 36px;">
+                                    <td align="center" style="padding:0;Margin:0;padding-top:20px;padding-left: 36px;">
                                         <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:600px">
                                             <tbody>
                                                 <tr style="border-collapse:collapse">

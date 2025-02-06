@@ -148,6 +148,20 @@ class Daftar extends CI_Controller
         }
     }
 
+
+    // function kirim()
+    // {
+    //     $url = "URL:" . base_url('Daftar/konfirmasi/');
+    //     $send_email = [
+    //         'subject' => 'Aktivasi Akun Mitra Wisdil',
+    //         'temp' => 'temp_sendaktivasi',
+    //         'nama' => 'Oktadha Nurdiansyah',
+    //         'email' => 'oktadha01@gmail.com',
+    //         'url' => $url,
+    //     ];
+    //     $this->send_email($send_email);
+    // }
+
     function konfirmasi()
     {
 
